@@ -4,7 +4,7 @@
     $str = getParamFromGet('str');
     if (!empty($str))
     {
-        echo last($str);
+        echo сheckIdentifier($str);
     }
     else
     {
