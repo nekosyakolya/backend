@@ -27,7 +27,7 @@
         $string = '';
         for ($i = (strlen($str) - 1); $i >= 0; $i--)
         {
-            $string = $string.$str[$i];
+            $string = $strings . $str[$i];
         }
         return $string;
     }
@@ -60,4 +60,31 @@
             $result = "NO, the first symbol incorrect";
         }
         return $result;
+    }
+    function deletBlanks($str)
+    {
+        $blank = '-';
+        $space = ' ';
+        $string = '';
+        $i = 0;
+        if ($str[$i] == $blank)
+        {
+            while ($str[$i] == $blank)
+            {
+                $i++;
+            }
+            $string = $string . $str[$i];
+        }
+        for ($i; $i< strlen($str); $i++)
+        {
+            if ($str[$i] != $blank)
+            {
+                $string = $string . $str[$i];
+            }
+            else if ($i != strlen($str))
+            {
+                $string = $string . $space;
+            } 
+        }
+        return $string;
     }
