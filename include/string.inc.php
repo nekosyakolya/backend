@@ -1,90 +1,105 @@
 <?php
-    function last($str)
+    function last($receivedString)
     {
-        $string = '';
-        $string = substr($str, -1); 
-        return $string;
+        $newString = '';
+        $newString = substr($receivedString, -1); 
+        return $newString;
     }
 
-    function getParamFromGet($arg)
+    function getParamFromGet($receivedString)
     {
-        $string = '';
-        if (isset($_GET[$arg]))
+        $newString = '';
+        if (isset($_GET[$receivedString]))
         {
-            $string = ($_GET[$arg]);
+            $newString = ($_GET[$receivedString]);
         } 
-        return $string;
+        return $newString;
     }
 
-    function withoutLast($str)
+    function withoutLast($receivedString)
     {
-        $string = '';
-        $string = substr($str, 0, -1); 
-        return $string;
+        $newString = '';
+        $newString = substr($receivedString, 0, -1); 
+        return $newString;
     }
-    function revers($str)
+
+    function revers($receivedString)
     {
-        $string = '';
-        for ($i = (strlen($str) - 1); $i >= 0; $i--)
+        $newString = '';
+        for ($i = (strlen($receivedString) - 1); $i >= 0; $i--)
         {
-            $string = $strings . $str[$i];
+            $newString = $newString . $receivedString[$i];
         }
-        return $string;
+        return $newString;
     }
-    function сheckIdentifier($str)
+
+    function сheckIdentifier($receivedString)
     {
-        $i = 0;
-        if (ctype_alpha($str[$i]))
+        $result = 3; 
+        if (ctype_alnum($receivedString))
         {
-            $letter = True;
-            $result = "Yes";
-            for ($i = 1; $i< strlen($str); $i++)
+            $result = 1;
+            if (is_numeric($receivedString[0]))
             {
-                if (is_numeric($str[$i]))
-                {
-                    $letter = False;
-                }
-                if (!($letter) && ctype_alpha($str[$i]))
-                {
-                    $result = "NO, letter comes after figure";
-                    break;
-                }
-                if (ctype_alpha($str[$i]))
-                {
-                    $letter = True;
-                }
-            }
-        }
-        else
-        {
-            $result = "NO, the first symbol incorrect";
+                $result = 2;
+            }  
         }
         return $result;
     }
-    function deletBlanks($str)
+
+    function deleteFirstBlanks($receivedString)
     {
-        $blank = '-';
-        $space = ' ';
-        $string = '';
-        $i = 0;
-        if ($str[$i] == $blank)
+        if ($receivedString[$i] == $space)
         {
-            while ($str[$i] == $blank)
+            while ($receivedString[$i] == $space)
             {
                 $i++;
             }
-            $string = $string . $str[$i];
+            $newString = $newString . $receivedString[$i];
         }
-        for ($i; $i< strlen($str); $i++)
+        return $newString;
+    }
+
+    function deleteBlanks($receivedString)
+    {
+        $space = ' ';
+        $newString = '';
+        $i = 0;
+        $newString = deleteFirstBlanks($receivedString);
+        for ($i; $i < strlen($receivedString); $i++)
         {
-            if ($str[$i] != $blank)
+            if ($receivedString[$i] != $space)
             {
-                $string = $string . $str[$i];
+                $newString = $newString . $receivedString[$i];
             }
-            else if ($i != strlen($str))
+            else if ($i != strlen($receivedString))
             {
-                $string = $string . $space;
+                $newString = $newString. $space;
             } 
         }
-        return $string;
+        return $newString;
+    }
+
+    function passwordStrength($password)
+    {
+        $reliabilityPassword = 0;
+        $countFigures = 0;
+        $uppercase = 0;
+        $n = strlen($password);
+        if(ctype_alnum($password)) 
+        {
+            for ($i = 0; $i< strlen($password); $i++)
+            {
+                if (is_numeric($str[$i]))
+                {
+                    $countFigures++;
+                }
+                if (ctype_lower($str[$i]))
+                {
+                    $uppercase++;
+                }
+            }
+            $reliabilityPassword = $reliabilityPassword + (4 * $n) + (4 * $countFigures) + (($n - $uppercase) * 2);
+        }
+        return $reliabilityPassword;
     }

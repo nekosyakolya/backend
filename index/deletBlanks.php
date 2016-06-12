@@ -4,7 +4,7 @@
     $str = getParamFromGet('str');
     if (!empty($str))
     {
-        echo deletBlanks($str);
+        echo deleteBlanks($str);
     }
     else
     {
