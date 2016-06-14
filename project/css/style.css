@@ -176,6 +176,7 @@ a
     font-size: 15px;
     width: 37%;
     padding-left: 76px;
+    padding-top: 50px;
 }
 
 .album_title
@@ -219,4 +220,12 @@ a
     color: #fff;
     cursor: pointer;
     width: 59%;
+}
+
+.loading
+{
+    float: right;
+    height: 16%;
+    width: 34%;
+    margin-right: 140px;
 }
