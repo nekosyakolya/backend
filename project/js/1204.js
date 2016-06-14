@@ -8,13 +8,8 @@ function img()
     if (i > (backgroundArray.length - 1) ) 
     {
         i = 0;
-        $("#slider").fadeIn(1500);
-        $("#slider").css("background-image", "url(" + backgroundArray[i] + ")");
     }
-    else 
-    {
-        $("#slider").fadeIn(1500);
-        $("#slider").css("background-image", "url(" + backgroundArray[i] + ")"); 
-    } 
+    $("#slider").fadeIn(1500);
+    $("#slider").css("background-image", "url(" + backgroundArray[i] + ")"); 
     i++;
 };
