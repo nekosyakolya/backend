@@ -1,63 +1,20 @@
-var hwSlideSpeed = 900;
-var hwTimeOut = 1100;
-var hwNeedLinks = true;
- 
-$(document).ready(function() 
+var backgroundArray = ["img/11.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/1.jpg", "img/7.jpg"]; 
+var i = 1;
+
+var interval = self.setInterval("img()", 7000) 
+
+function img() 
 {
-    $('.slide').css({"position" : "absolute","top": '0', "left": '0'}).hide().eq(0).show();
-    var slideNum = 0;
-    var slideTime;
-    slideCount = $("#slider .slide").size();
-    var animSlide = function(arrow)
+    if (i > (backgroundArray.length - 1) ) 
     {
-        clearTimeout(slideTime);
-        $('.slide').eq(slideNum).fadeOut(hwSlideSpeed);
-        if(arrow == "next")
-        {
-            if(slideNum == (slideCount - 1))
-            {
-                slideNum = 0;
-            }
-            else
-            {
-                slideNum++
-            }
-        }
-        else if(arrow == "prew")
-        {
-            if(slideNum == 0)
-            {
-                 slideNum = slideCount - 1;
-            }
-            else
-            {
-                 slideNum -= 1
-            }
-        }
-        else
-        {
-            slideNum = arrow;
-        }
-        $('.slide').eq(slideNum).fadeIn(hwSlideSpeed, rotator);
-        $(".control-slide.active").removeClass("active");
-        $('.control-slide').eq(slideNum).addClass('active');
-     }
-     if(hwNeedLinks)
-     {
-         var $linkArrow = $('#prewbutton', '#nextbutton').prependTo('#slider');      
-         $('#nextbutton').click(function(){animSlide("next")});
-         $('#prewbutton').click(function(){animSlide("prew")})
-     }
-     var pause = false;
-     var rotator = function()
-     {
-          if(!pause)
-          {
-              slideTime = setTimeout(function(){animSlide('next')}, hwTimeOut)
-          }
-     }
-     $('#slider-wrap').hover(    
-        function(){clearTimeout(slideTime); pause = true},
-        function(){pause = false; rotator()});
-     rotator();
-})
+        i = 0;
+        $("#slider").fadeIn(1500);
+        $("#slider").css("background-image", "url(" + backgroundArray[i] + ")");
+    }
+    else 
+    {
+        $("#slider").fadeIn(1500);
+        $("#slider").css("background-image", "url(" + backgroundArray[i] + ")"); 
+    } 
+    i++;
+};
