@@ -9,7 +9,91 @@ function img()
     {
         i = 0;
     }
-    $("#slider").fadeIn(1500);
+    $("#slider").fadeIn(100);
     $("#slider").css("background-image", "url(" + backgroundArray[i] + ")"); 
     i++;
 };
+
+var swicthFirst = true;
+var swicthSecond = false;
+var swicthThird = false;
+var swicthFourth = false;
+$('#first_element').click(function(){
+    $('#violetBandFirst').css("visibility", "visible");  
+    swicthFirst = true;
+    if (swicthSecond)
+    {
+      $('#violetBandSecond').css("visibility", "hidden"); 
+      swicthSecond = false;
+    }
+    else if (swicthThird)
+    {
+        $('#violetBandThird').css("visibility", "hidden"); 
+        swicthThird = false;
+    }
+    else if (swicthFourth)
+    {
+        $('#violetBandFourth').css("visibility", "hidden"); 
+        swicthFourth = false;
+    }
+});
+
+$('#second_element').click(function(){
+    $('#violetBandSecond').css("visibility", "visible");  
+    swicthSecond = true;
+    if (swicthThird)
+    {
+      $('#violetBandThird').css("visibility", "hidden");  
+      swicthThird = false;
+    }
+    else if (swicthFirst)
+    {
+        $('#violetBandFirst').css("visibility", "hidden"); 
+        swicthFirst = false;
+    }
+    else if (swicthFourth)
+    {
+        $('#violetBandFourth').css("visibility", "hidden"); 
+        swicthFourth = false;
+    }
+});
+
+$('#third_element').click(function(){
+    $('#violetBandThird').css("visibility", "visible");  
+    swicthThird = true;
+    if (swicthSecond)
+    {
+      $('#violetBandSecond').css("visibility", "hidden");  
+      swicthSecond = false;
+    }
+    else if (swicthFirst)
+    {
+        $('#violetBandFirst').css("visibility", "hidden"); 
+        swicthFirst = false;
+    }
+    else if (swicthFourth)
+    {
+        $('#violetBandFourth').css("visibility", "hidden"); 
+        swicthFourth = false;
+    }
+});
+
+$('#fourth_element').click(function(){
+    $('#violetBandFourth').css("visibility", "visible");  
+    swicthFourth = true;
+    if (swicthSecond)
+    {
+      $('#violetBandSecond').css("visibility", "hidden");  
+      swicthSecond = false;
+    }
+    else if (swicthFirst)
+    {
+        $('#violetBandFirst').css("visibility", "hidden"); 
+        swicthFirst = false;
+    }
+    else if (swicthThird)
+    {
+        $('#violetBandThird').css("visibility", "hidden"); 
+        swicthThird = false;
+    }
+});

@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ALБооом</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="header">
+      <div class="center_block"> 
+        <div class="float_left camera_padding">
+          <a href="#" class="camera"></a>
+        </div>
+        <a href="#" class="mogo_logo_top_block float_left font_family_montserrat color_white" title="ALБОМ">ALБооом</a>
+        <div class="menu_block_header">
+          <ul class="menu_top_block">
+            <li class="menu_top_block_li" id="first_element">
+              <a href="#slider" class="text_white color_white font_family_montserrat">Главная</a>
+            </li> 
+            <li class="menu_top_block_li" id="second_element">
+              <a href="#about" class="text_white font_family_montserrat color_white">О нас</a>
+            </li>     
+            <li class="menu_top_block_li" id="third_element">
+              <a href="#regisrize" class="text_white font_family_montserrat color_white">Регистрация</a>
+            </li>
+            <li class="entrance" id="fourth_element">
+              <a href="#entrance" class="text_white font_family_montserrat color_white">Войти</a>
+            </li> 
+          </ul>
+          <div class="violet_band_menu float_left" id="violetBandFirst"></div>
+          <div class="violet_band_menu float_left" id="violetBandSecond"></div>
+          <div class="violet_band_menu float_left" id="violetBandThird"></div>
+          <div class="violet_band_menu float_left" id="violetBandFourth"></div>
+          <div class="clear"></div>
+        </div> 
+        <div class="clear"></div>
+      </div> 
+    </div> 
+    <div id="slider"></div>
+    <div class="description">
+      <div class="center_block back_white">
+        <h2 class="title font_family_montserrat" id="about">О нас</h2>
+        <div class="about_us">
+          <p class="album_text album_text_first_padding"><span class="album_title">ALБооом</span>-не просто приложение!Это удобный сервис для создания онлайн-фотоальбомов.Фотография-остановленное мгновение жизни.Разве не прекрасно иметь возможность делиться своими впечатлениями?</p> 
+          <img src="img/sofa.jpg" class="loading" alt="loading" />
+          <div class="clear"></div>
+        </div>
+        <div class="about_us">
+          <img src="img/list.jpg" class="cafe" alt="loading" />
+          <p class="album_text_second">Вы сами создаете альбом.Только вы решаете,какими будут фон и название.Также имеется возможность оставлять комменатрии,ставить лайки.Вперед к прекрасному!</p>  
+          <div class="clear"></div>
+        </div>
+        <div class="about_us">
+          <p class="album_text album_text_third_padding">Элементарно! Сбросьте ваши изображения и видео файлы в ALБооом,нажмите кнопку Создать, и Ваш альбом готов!</p>
+          <img src="img/loading.png" class="loading" alt="loading" />
+          <div class="clear"></div>
+        </div>
+        <h2 class="title font_family_montserrat" id="regisrize">Регистрация</h2>
+        <form action="login.php" name="questionnaire" method="post" class="regisrize">
+          <input id="name" type="text" maxlength="40" name="name" placeholder="Имя пользователя" class="regisrize_input" />
+          <input id="address" type="text" maxlength="40" placeholder="E-mail" name="address" class="regisrize_input" />
+          <input id="address" type="password" maxlength="40" placeholder="Пароль" name="address" class="regisrize_input" />
+          <input type="submit" value="Зарегистрироваться" class="regisrize_input regisrize_submit" />
+        </form>
+        <div class="clear"></div>
+      </div>
+      <div class="center_block back_white about_us_entrance">
+        <h2 class="title font_family_montserrat" id="entrance">Войти</h2>
+        <form action="login.php" name="questionnaire" method="post" class="regisrize entrance_form">
+          <input id="name" type="text" maxlength="40" name="name" placeholder="Имя пользователя" class="regisrize_input" />
+          <input id="address" type="password" maxlength="40" placeholder="Пароль" name="address" class="regisrize_input" />
+          <input type="submit" value="Войти" class="regisrize_input regisrize_submit" />
+          <a href="#" class="password">Забыли пароль?</a>
+        </form>
+      </div>
+      <div class="center_block back_white about_us_entrance">
+        <form action="loading.php" method="post" enctype="multipart/form-data" class="regisrize entrance_form">
+          <input type="file" name="somename" class="regisrize_input" />
+          <input type="submit" value="Загрузить" class="regisrize_input" />
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/1204.js"></script>
+  </body>  
+</html>

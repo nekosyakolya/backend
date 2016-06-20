@@ -67,7 +67,7 @@
     text-decoration: none;
 }
 
-.menu_top_block li
+.menu_top_block_li
 {
     margin-right: 55px;
 }
@@ -137,14 +137,23 @@ a
     display: block;
 }
 
+.entrance
+{
+    margin-right: 0;
+}
+
 .menu_block_header
 {
     float: right;
-    width: 508px;
+    width: 439px;
     padding-top: 18px;
     height: 33px;
 }
 
+.camera_padding
+{
+    padding-left: 5px;
+}
 .center_header
 {
     margin: 0 auto;
@@ -164,7 +173,7 @@ a
     line-height: 56px;
     font-weight: bold;
     font-size: 28px;
-	margin: 0;
+	margin: 0 0 20px 0;
     text-align: center;
     color: #231d32;
 }
@@ -173,12 +182,30 @@ a
     float: left;
     color: #231645;
     line-height: 23px;
-    font-size: 15px;
-    width: 37%;
-    padding-left: 76px;
-    padding-top: 50px;
+    font-size: 18px;
+    width: 24%;
+    padding-left: 186px;
 }
 
+.album_text_first_padding
+{
+    padding-top: 0;
+}
+
+.album_text_third_padding
+{
+    padding-top: 13px;
+}
+.album_text_second
+{
+    float: right;
+    color: #231645;
+    line-height: 23px;
+    font-size: 18px;
+    width: 31%;
+    margin-right: 169px;
+    padding-top: 6px;
+}
 .album_title
 {
     font-weight: bold;
@@ -188,7 +215,7 @@ a
 .regisrize
 {
     background-color: #291b4f;
-    margin: 0 auto 50px auto;
+    margin: 0 auto;
     width: 26%;
     padding-top: 28px;
     padding-bottom: 8px;
@@ -212,6 +239,7 @@ a
     border: 1px solid #000;
     width: 55%;
     padding: 5px;
+    text-align: center;
 }
 
 .regisrize_submit
@@ -227,5 +255,69 @@ a
     float: right;
     height: 16%;
     width: 34%;
-    margin-right: 140px;
+    margin-right: 175px;
+}
+
+.cafe
+{
+    float: left;
+    height: 16%;
+    width: 29%;
+    padding-left: 186px;
+}
+
+.about_us
+{
+   margin-bottom: 32px; 
+}
+
+.password
+{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.entrance_form
+{
+    margin-bottom: 0;
+}
+
+.about_us_entrance
+{
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.violet_band_menu
+{
+    background: #bfb8d0;
+    height: 3px;
+}
+
+#violetBandFirst
+{
+    width: 66px;
+    margin: 4px 55px auto 0;
+}
+
+#violetBandSecond
+{
+    width: 46px;
+    margin: 4px 55px auto 0;
+    visibility: hidden;
+}
+
+#violetBandThird
+{
+    width: 105px;
+    margin: 4px 53px auto 0;
+    visibility: hidden;
+}
+
+#violetBandFourth
+{
+    width: 48px;
+    margin: 4px 0 auto 0;
+    visibility: hidden;
 }
