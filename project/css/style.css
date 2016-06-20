@@ -289,35 +289,7 @@ a
     padding-bottom: 25px;
 }
 
-.violet_band_menu
-{
-    background: #bfb8d0;
-    height: 3px;
-}
-
-#violetBandFirst
-{
-    width: 66px;
-    margin: 4px 55px auto 0;
-}
-
-#violetBandSecond
-{
-    width: 46px;
-    margin: 4px 55px auto 0;
-    visibility: hidden;
-}
-
-#violetBandThird
-{
-    width: 105px;
-    margin: 4px 53px auto 0;
-    visibility: hidden;
-}
-
-#violetBandFourth
-{
-    width: 48px;
-    margin: 4px 0 auto 0;
-    visibility: hidden;
+.menu_block_header a:hover,
+.menu_block_header a.active {
+    color: #bfb8d0;
 }
