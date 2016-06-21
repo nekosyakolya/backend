@@ -290,6 +290,7 @@ a
 }
 
 .menu_block_header a:hover,
-.menu_block_header a.active {
+.menu_block_header a.active
+{
     color: #bfb8d0;
 }

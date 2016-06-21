@@ -66,19 +66,13 @@
       </div>
       <section class="center_block back_white about_us_entrance" id="entrance">
         <h2 class="title font_family_montserrat">Войти</h2>
-        <form action="log.php" name="questionnaire" method="post" class="regisrize entrance_form">
-          <input id="name" type="text" maxlength="40" name="name" placeholder="Имя пользователя" class="regisrize_input" />
-          <input id="address" type="password" maxlength="40" placeholder="Пароль" name="address" class="regisrize_input" />
-          <input type="submit" value="Войти" class="regisrize_input regisrize_submit" />
+        <form action="login.php" name="questionnaire" method="post" class="regisrize entrance_form" id="login">
+          <input type="text" maxlength="40" name="username" placeholder="Имя пользователя" class="regisrize_input" />
+          <input type="password" maxlength="40" placeholder="Пароль" name="password" class="regisrize_input" />
+          <input type="submit" value="Войти" name="login" class="regisrize_input regisrize_submit" />
           <a href="#" class="password">Забыли пароль?</a>
         </form>
       </section>
-      <div class="center_block back_white about_us_entrance">
-        <form action="loading.php" method="post" enctype="multipart/form-data" class="regisrize entrance_form">
-          <input type="file" name="somename" class="regisrize_input" />
-          <input type="submit" value="Загрузить" class="regisrize_input" />
-        </form>
-      </div>
     </div>
     <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
     <script type="text/javascript" src="js/1204.js"></script>

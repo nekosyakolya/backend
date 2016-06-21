@@ -1,10 +1,10 @@
 <?php
-    require_once('album.html');
+    require_once('intropage.html');
     $maxSize = 1024000;
     $blacklist = array(".php", ".phtml", ".php3", ".php4", ".html", ".htm");
     foreach ($blacklist as $item)
     {
-        if(preg_match("/$item\$/i", $_FILES['somename']['name'])) 
+        if (preg_match("/$item\$/i", $_FILES['somename']['name'])) 
         {
             exit;
         }
