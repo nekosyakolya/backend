@@ -47,7 +47,7 @@ $(document).ready(function ()
         var target = $(hash);
         $("html, body").animate({
             scrollTop: target.offset().top
-        }, 500, function()
+        }, 700, function()
         {
             window.location.hash = hash;
             $(document).on("scroll", onScroll);

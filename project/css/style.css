@@ -152,7 +152,7 @@ a
 
 .camera_padding
 {
-    padding-left: 5px;
+    padding-left: 9px;
 }
 .center_header
 {
@@ -285,8 +285,7 @@ a
 
 .about_us_entrance
 {
-    padding-top: 50px;
-    padding-bottom: 25px;
+    padding-bottom: 55px;
 }
 
 .exit
@@ -299,5 +298,22 @@ a
 .menu_block_header a:hover,
 .menu_block_header a.active
 {
-    color: #bfb8d0;
+    color: #000;
+    text-shadow: 
+		-0   -1px 0   #d9daf2,
+		 0   -1px 0   #d9daf2,
+		-0    1px 0   #d9daf2,
+		 0    1px 0   #d9daf2,
+		-1px -0   0   #d9daf2,
+		 1px -0   0   #d9daf2,
+		-1px  0   0   #d9daf2,
+		 1px  0   0   #d9daf2,
+		-1px -1px 0   #d9daf2,
+		 1px -1px 0   #d9daf2,
+		-1px  1px 0   #d9daf2,
+		 1px  1px 0   #d9daf2,
+		-1px -1px 0   #d9daf2,
+		 1px -1px 0   #d9daf2,
+		-1px  1px 0   #d9daf2,
+		 1px  1px 0   #d9daf2;
 }
