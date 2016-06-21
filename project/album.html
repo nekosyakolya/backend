@@ -55,18 +55,18 @@
         </section>
         <section id="regisrize">
           <h2 class="title font_family_montserrat">Регистрация</h2>
-          <form action="login.php" name="questionnaire" method="post" class="regisrize">
-            <input id="name" type="text" maxlength="40" name="name" placeholder="Имя пользователя" class="regisrize_input" />
-            <input id="address" type="text" maxlength="40" placeholder="E-mail" name="address" class="regisrize_input" />
-            <input id="address" type="password" maxlength="40" placeholder="Пароль" name="address" class="regisrize_input" />
-            <input type="submit" value="Зарегистрироваться" class="regisrize_input regisrize_submit" />
+          <form action="register.php" name="questionnaire" method="post" class="regisrize">
+            <input id="username" name="username" type="text" maxlength="40" placeholder="Имя пользователя" class="regisrize_input" />
+            <input id="email" name="email" type="email" maxlength="40" placeholder="E-mail" class="regisrize_input" />
+            <input id="password" name="password" type="password" maxlength="40" placeholder="Пароль" class="regisrize_input" />
+            <input type="submit" value="Зарегистрироваться" class="regisrize_input regisrize_submit" id="register" name= "register" />
           </form>
         </section>
         <div class="clear"></div>
       </div>
       <section class="center_block back_white about_us_entrance" id="entrance">
         <h2 class="title font_family_montserrat">Войти</h2>
-        <form action="login.php" name="questionnaire" method="post" class="regisrize entrance_form">
+        <form action="log.php" name="questionnaire" method="post" class="regisrize entrance_form">
           <input id="name" type="text" maxlength="40" name="name" placeholder="Имя пользователя" class="regisrize_input" />
           <input id="address" type="password" maxlength="40" placeholder="Пароль" name="address" class="regisrize_input" />
           <input type="submit" value="Войти" class="regisrize_input regisrize_submit" />

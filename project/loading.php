@@ -1,5 +1,6 @@
 <?php
     require_once('album.html');
+    $maxSize = 1024000;
     $blacklist = array(".php", ".phtml", ".php3", ".php4", ".html", ".htm");
     foreach ($blacklist as $item)
     {
@@ -14,7 +15,7 @@
     {
         exit;
     }
-    if ($size > 1024000) 
+    if ($size > $maxSize) 
     {
         exit;
     }
