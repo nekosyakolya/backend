@@ -289,6 +289,13 @@ a
     padding-bottom: 25px;
 }
 
+.exit
+{
+    padding-top: 19px;
+    margin-right: 11px;
+    float: right;  
+}
+
 .menu_block_header a:hover,
 .menu_block_header a.active
 {
