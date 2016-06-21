@@ -317,3 +317,24 @@ a
 		-1px  1px 0   #d9daf2,
 		 1px  1px 0   #d9daf2;
 }
+
+#entrance_forma
+{
+    display: none;
+}
+
+.mini_photo
+{
+    height: 220px;
+    width: 305px;
+}
+
+.margin_mini_photo
+{
+    margin-right: 15px;
+}
+
+.mini_photo_first
+{
+    padding-left: 70px;
+}

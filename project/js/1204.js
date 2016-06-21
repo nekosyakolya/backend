@@ -14,6 +14,7 @@ function img()
     i++;
 };
 
+
 var menu_selector = ".menu_block_header"; 
  
 function onScroll()
@@ -56,4 +57,7 @@ $(document).ready(function ()
     });
  
 });
+
+$("#fourth_element").click(function(){$("#entrance_forma").show("fast");});
+$("#authorized").click(function(){$("#entrance_forma").show("fast");});
  

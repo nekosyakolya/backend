@@ -10,16 +10,16 @@
             $result = mysql_query($sql);
             if($result)
             {
-                $message = "Account Successfully Created";
+                $message = "Регистрация прошла успешно!";
             } 
             else 
             {
-                $message = "Failed to insert data information!";
+                $message = "Не удалось сохранить данные!";
             }
         }
         else 
         {
-            $message = "That username already exists! Please try another one!";
+            $message = "Это имя пользователя уже существует! Пожалуйста, попробуйте еще раз!";
         }
         return $message;
     }

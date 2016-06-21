@@ -27,4 +27,4 @@
             $message = "All fields are required!";
 	    }
 	}
-    echo $message;
+    header("Location: error.html");

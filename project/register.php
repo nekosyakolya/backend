@@ -13,8 +13,8 @@
 	    } 
         else 
         {
-	        $message = "All fields are required!";
+	        $message = "Заполните все поля,пожалуйста!";
 	    }
 	}
-    echo $message;
+    if (!empty($message)) {echo "<p class=\"error\">" . "MESSAGE: ". $message . "</p>";} 
 	
