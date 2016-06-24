@@ -18,9 +18,9 @@
 
 .center_block
 {
-    width: 80%;	
-	margin: auto;
-	padding: 0;
+    width: 80%;
+    margin: auto;
+    padding: 0;
 }
 
 .camera
@@ -33,7 +33,7 @@
 
 .color_white
 {
-   color: #fff; 
+   color: #fff;
 }
 
 .header
@@ -88,7 +88,7 @@
     font-weight: bold;
     font-size: 31px;
     text-align: right;
-	margin: 0;
+    margin: 0;
     text-decoration: none;
 }
 
@@ -173,7 +173,7 @@ a
     line-height: 56px;
     font-weight: bold;
     font-size: 28px;
-	margin: 0 0 20px 0;
+    margin: 0 0 20px 0;
     text-align: center;
     color: #231d32;
 }
@@ -242,6 +242,18 @@ a
     text-align: center;
 }
 
+.regisrize_input_loading
+{
+    margin-bottom: 15px;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 1px solid #000;
+    width: 85%;
+    padding: 5px;
+    text-align: center;
+}
+
 .regisrize_submit
 {
     background-color: #9489af;
@@ -300,22 +312,22 @@ a
 {
     color: #000;
     text-shadow: 
-		-0   -1px 0   #d9daf2,
-		 0   -1px 0   #d9daf2,
-		-0    1px 0   #d9daf2,
-		 0    1px 0   #d9daf2,
-		-1px -0   0   #d9daf2,
-		 1px -0   0   #d9daf2,
-		-1px  0   0   #d9daf2,
-		 1px  0   0   #d9daf2,
-		-1px -1px 0   #d9daf2,
-		 1px -1px 0   #d9daf2,
-		-1px  1px 0   #d9daf2,
-		 1px  1px 0   #d9daf2,
-		-1px -1px 0   #d9daf2,
-		 1px -1px 0   #d9daf2,
-		-1px  1px 0   #d9daf2,
-		 1px  1px 0   #d9daf2;
+    -0   -1px 0   #d9daf2,
+    0   -1px 0   #d9daf2,
+    -0    1px 0   #d9daf2,
+    0    1px 0   #d9daf2,
+    -1px -0   0   #d9daf2,
+    1px -0   0   #d9daf2,
+    -1px  0   0   #d9daf2,
+    1px  0   0   #d9daf2,
+    -1px -1px 0   #d9daf2,
+    1px -1px 0   #d9daf2,
+    -1px  1px 0   #d9daf2,
+    1px  1px 0   #d9daf2,
+    -1px -1px 0   #d9daf2,
+    1px -1px 0   #d9daf2,
+    -1px  1px 0   #d9daf2,
+    1px  1px 0   #d9daf2;
 }
 
 #entrance_forma

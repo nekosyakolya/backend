@@ -1,5 +1,5 @@
 <?php
-	session_start();
-	unset($_SESSION["session_username"]);
-	session_destroy();
-	header("location: album.html");
+    session_start();
+    unset($_SESSION["session_username"]);
+    session_destroy();
+    header("location: album.html");

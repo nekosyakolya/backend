@@ -1,30 +1,29 @@
 <?php
-	session_start();
-    require_once('connection.php');
-    require_once('database.inc.php');
+    session_start();
+    require_once('include/connection.inc.php');
+    require_once('include/database.inc.php');
     if (isset($_SESSION["session_username"]))
     {  
-	    header("Location: intropage.html");
-	}
+      header("Location: intropage.html");
+    }
     if (isset($_POST["login"]))
     {
-	    if (!empty($_POST['username']) && !empty($_POST['password'])) 
+        if (!empty($_POST['username']) && !empty($_POST['password'])) 
         {
-	        $username = htmlspecialchars($_POST['username']);
-	        $password = htmlspecialchars($_POST['password']);
-	        if (validation($username, $password) == 2)
+            $username = htmlspecialchars($_POST['username']);
+            $password = htmlspecialchars($_POST['password']);
+            if (validation($username, $password))
             {
-	            $_SESSION['session_username'] = $username;	 
+                $_SESSION['session_username'] = $username;
                 header("Location: intropage.html");
-	        } 
+            }
             else 
             {
-                $message = "Invalid username or password!";
+                header("Location: error.html");
             }
-	    } 
+        } 
         else 
         {
-            $message = "All fields are required!";
-	    }
-	}
-    header("Location: error.html");
+            header("Location: error.html");
+        }
+    }

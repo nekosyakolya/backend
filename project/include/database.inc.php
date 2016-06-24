@@ -26,9 +26,9 @@
     function validation($username, $password)
     {
         $query = mysql_query("SELECT * FROM usertable WHERE username='".$username."' AND password='".$password."'");
-	    $numrows = mysql_num_rows($query);
-        $result = 1;
-	    if($numrows != 0)
+        $numrows = mysql_num_rows($query);
+        $result = false;
+        if($numrows != 0)
         {
             while($row = mysql_fetch_assoc($query))
             {
@@ -37,7 +37,7 @@
             }
             if($username == $dbusername && $password == $dbpassword)
             {
-                $result = 2;
+                $result = true;
             }
         }
         return $result;    
