@@ -1,4 +1,4 @@
-var backgroundArray = ["img/11.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg", "img/5.jpg", "img/1.jpg", "img/7.jpg"];
+var backgroundArray = ["img/011.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg", "img/01.jpg", "img/07.jpg"];
 var i = 1;
 function img() 
 {

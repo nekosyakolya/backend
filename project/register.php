@@ -8,7 +8,7 @@
         {
             $username = htmlspecialchars($_POST['username']);
             $email = htmlspecialchars($_POST['email']);
-            $password = htmlspecialchars($_POST['password']);
+            $password = md5(htmlspecialchars($_POST['password']));
             $message = addInUserTable($username, $email, $password);
         }
         else

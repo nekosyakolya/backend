@@ -1,4 +1,5 @@
 var menu_selector = ".menu_block_header"; 
+
 function onScroll()
 {
     var scroll_top = $(document).scrollTop();
@@ -6,18 +7,18 @@ function onScroll()
     {
         var adjustment = $(this).attr("href");
         var target = $(adjustment);
-        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) 
+        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top)
         {
             $(menu_selector + " a.active").removeClass("active");
             $(this).addClass("active");
         }
-        else 
+        else
         {
             $(this).removeClass("active");
         }
     });
 }
-
+ 
 $(document).ready(function ()
 {
     $(document).on("scroll", onScroll);
@@ -32,9 +33,9 @@ $(document).ready(function ()
         $("body").animate(
         {
             scrollTop: target.offset().top
-        }, 700, function()
+        }, 800, function()
         {
-            window.location.adjustment = adjustmentы;
+            window.location.adjustment = adjustment;
             $(document).on("scroll", onScroll);
         });
  
@@ -42,6 +43,4 @@ $(document).ready(function ()
  
 });
 
-$("#fourth_element").click(function(){$("#entrance_forma").show("fast");});
-
-$("#authorized").click(function(){$("#entrance_forma").show("fast");});
+$(".authorized").click(function(){$("#entrance_forma").show("fast");});

@@ -74,12 +74,20 @@
 
 #slider
 { 
-    background-image: url("../img/11.jpg");
+    background-image: url("../img/011.jpg");
     width: 100%;
     height: 650px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.loading_gif
+{
+  height: 40%;
+  width: 40%;
+  display: none;
+  margin: 0 auto;
 }
 
 .mogo_logo_top_block
@@ -118,6 +126,45 @@ body
     margin: auto;
 }
 
+.menu_block_header
+{
+    float: right;
+    padding-top: 18px;
+    height: 33px;
+}
+
+.folder
+{
+  height: 305px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.img_thumbs
+{
+  width: 270px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.9), 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.decoration
+{
+  text-decoration: none;
+}
+
+.menu_block_header_home
+{
+  width: 439px;
+}
+
+.menu_block_header_user
+{
+  width: 581px;
+}
+
 .menu_top_block
 {
     overflow: hidden;
@@ -125,6 +172,13 @@ body
     margin: 0; 
     padding-left: 0; 
     height: 22px;
+}
+
+.center_div
+{
+  margin: 0 auto;
+  width: 33%;
+  padding-top: 58px;
 }
 
 li
@@ -140,14 +194,6 @@ a
 .entrance
 {
     margin-right: 0;
-}
-
-.menu_block_header
-{
-    float: right;
-    width: 439px;
-    padding-top: 18px;
-    height: 33px;
 }
 
 .camera_padding
@@ -176,6 +222,7 @@ a
     margin: 0 0 20px 0;
     text-align: center;
     color: #231d32;
+    text-decoration: none;
 }
 .album_text
 {
@@ -349,4 +396,53 @@ a
 .mini_photo_first
 {
     padding-left: 70px;
+}
+
+#slider-wrap
+{ 
+    width: 100%;
+    background-color: #1e192c;
+}
+
+#sliderNew
+{ 
+    width:940px;
+    height:360px;
+    overflow: hidden;
+    position:relative;
+}
+
+.slide
+{ 
+    width:100%;
+    height:100%;
+}
+
+.pad_arrow
+{
+    padding-top: 63px;
+    margin-right: 73px;
+}
+
+.sprait2
+{
+    background: url("../img/resultat.png");
+}
+#nextbutton
+{
+    background-position: 0 -767px;
+    width: 12px;
+    height: 22px;
+    display:block;
+    cursor: pointer;
+}
+
+}
+#prewbutton
+{
+    background-position: 0 -735px;
+    width: 12px;
+    height: 22px;
+    display: block;
+    cursor: pointer;
 }
