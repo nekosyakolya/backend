@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-01 05:58:18
+/* Smarty version 3.1.29, created on 2016-07-01 10:59:09
   from "Z:\home\test1.ru\www\backend\project\template\home.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5775ce3ac02871_33237512',
+  'unifunc' => 'content_577614bd8725d4_17859630',
   'file_dependency' => 
   array (
     '3ed07bed6accb3e76406b7244b6eee221c919855' => 
     array (
       0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\template\\home.tpl',
-      1 => 1467338291,
+      1 => 1467356223,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:layout_home.tpl' => 1,
   ),
 ),false)) {
-function content_5775ce3ac02871_33237512 ($_smarty_tpl) {
+function content_577614bd8725d4_17859630 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", array (
-  0 => 'block_19745775ce3aad7635_64905821',
+  0 => 'block_15623577614bd7cb1b8_73945891',
   1 => false,
   3 => 0,
   2 => 0,
@@ -35,7 +35,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", a
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "scripts", array (
-  0 => 'block_278315775ce3abc6057_71138225',
+  0 => 'block_20020577614bd857643_31261571',
   1 => false,
   3 => 0,
   2 => 0,
@@ -44,7 +44,7 @@ $_smarty_tpl->ext->_inheritance->endChild($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout_home.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'main_content'}  file:home.tpl */
-function block_19745775ce3aad7635_64905821($_smarty_tpl, $_blockParentStack) {
+function block_15623577614bd7cb1b8_73945891($_smarty_tpl, $_blockParentStack) {
 ?>
 
   <section id="slider"></section>
@@ -70,7 +70,7 @@ function block_19745775ce3aad7635_64905821($_smarty_tpl, $_blockParentStack) {
       </section>
       <section id="regisrize" class="about_us_entrance">
         <h2 class="title font_family_montserrat">Регистрация</h2>
-        <form action="php/register.php" name="questionnaire" method="post" class="regisrize">
+        <form action="register.php" name="questionnaire" method="post" class="regisrize">
           <input id="username" name="username" type="text" maxlength="40" placeholder="Имя пользователя" class="regisrize_input" />
           <input id="email" name="email" type="email" maxlength="40" placeholder="E-mail" class="regisrize_input" />
           <input id="password" name="password" type="password" maxlength="40" placeholder="Пароль" class="regisrize_input" />
@@ -82,7 +82,7 @@ function block_19745775ce3aad7635_64905821($_smarty_tpl, $_blockParentStack) {
     <section class="center_block back_white about_us_entrance" id="entrance">
       <div id="entrance_forma">
         <h2 class="title font_family_montserrat">Войти</h2>
-        <form action="php/login.php" name="questionnaire" method="post" class="regisrize entrance_form" id="login">
+        <form action="login.php" name="questionnaire" method="post" class="regisrize entrance_form" id="login">
           <input type="text" maxlength="40" name="username" placeholder="Имя пользователя" class="regisrize_input" />
           <input type="password" maxlength="40" placeholder="Пароль" name="password" class="regisrize_input" />
           <input type="submit" value="Войти" name="login" class="regisrize_input regisrize_submit" />
@@ -102,7 +102,7 @@ function block_19745775ce3aad7635_64905821($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'main_content'} */
 /* {block 'scripts'}  file:home.tpl */
-function block_278315775ce3abc6057_71138225($_smarty_tpl, $_blockParentStack) {
+function block_20020577614bd857643_31261571($_smarty_tpl, $_blockParentStack) {
 ?>
 
   <?php echo '<script'; ?>

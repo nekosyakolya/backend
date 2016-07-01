@@ -9,4 +9,3 @@
     $g_smarty->compile_dir = ROOT_DIR . "template_c/";
     $g_smarty->config_dir = ROOT_DIR . "config/";
     $g_smarty->cache_dir = ROOT_DIR . "cache/";
-    $g_smarty->display("home.tpl");

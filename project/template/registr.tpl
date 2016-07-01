@@ -3,6 +3,7 @@
   <section id="slider"></section>
   <div class="description">
     <div class="center_block back_white">
+      <h2 class="title font_family_montserrat error_registr">{$mail}</h2>
       <section id="about">
         <h2 class="title font_family_montserrat">О нас</h2>
         <div class="about_us">

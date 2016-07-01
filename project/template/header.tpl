@@ -7,7 +7,7 @@
     <div class="menu_block_header menu_block_header_user">
       <ul class="menu_top_block">
         <li class="menu_top_block_li" id="first_element">
-          <a href="intropage.html" class="text_white color_white font_family_montserrat">Создать альбом</a>
+          <a href="intropage.php" class="text_white color_white font_family_montserrat">Создать альбом</a>
         </li> 
         <li class="menu_top_block_li" id="second_element">
           <a href="my_albums.php" class="text_white font_family_montserrat color_white active">Мои альбомы</a>
@@ -16,7 +16,7 @@
           <a href="#" class="text_white font_family_montserrat color_white">Редактировать</a>
         </li>
         <li>
-          <a href="logout.php" class="text_white font_family_montserrat color_white">Выйти</a>
+          <a href="php/logout.php" class="text_white font_family_montserrat color_white">Выйти</a>
         </li>
       </ul>
     </div>

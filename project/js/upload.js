@@ -1,32 +1,32 @@
 $(document).ready(function()
 {
     $('.MultiFile').MultiFile(
-    { 
-      accept:'jpg|gif|bmp|png|rar', max:15, STRING:
-      { 
-        remove:'удалить',
-        file:'$file', 
-        selected:'Выбраны: $file', 
-        denied:'Неверный тип файла: $ext!', 
-        duplicate:'Этот файл уже выбран:\n$file!' 
-      } 
+    {
+         accept:'jpg|gif|bmp|png|rar', max:15, STRING:
+         { 
+              remove:'удалить',
+              file:'$file', 
+              selected:'Выбраны: $file', 
+              denied:'Неверный тип файла: $ext!', 
+              duplicate:'Этот файл уже выбран:\n$file!' 
+         } 
     });
     
-    $(".loading_gif").ajaxStart(function()
+    $(".loading_images").ajaxStart(function()
     {
-      $(this).show();
+         $(this).show();
     })
     
     .ajaxComplete(function()
     {
-      $(this).hide();
+         $(this).hide();
     });
     
     $('#uploadForm').ajaxForm(
     {
       success: function(data)
       {
-        document.location.href = 'http://test1.ru/backend/project/intropage.html';
+           document.location.href = 'http://test1.ru/backend/project/intropage.php';
       }
     });
 });

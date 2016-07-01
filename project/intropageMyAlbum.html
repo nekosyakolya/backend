@@ -25,7 +25,7 @@
               <a href="#regisrize" class="text_white font_family_montserrat color_white">Редактировать</a>
             </li>
             <li>
-              <a href="logout.php" class="text_white font_family_montserrat color_white">Выйти</a>
+              <a href="php/logout.php" class="text_white font_family_montserrat color_white">Выйти</a>
             </li>
           </ul>
         </div>
@@ -35,20 +35,23 @@
     <div class="description">
       <div class="center_block back_white about_us_entrance">
         <h2 class="title font_family_montserrat title_padding">Добро пожаловать!</h2>
-        <form id="uploadForm" action="doajaxfileupload.php" method="post" enctype="multipart/form-data" class="regisrize">
+        <form id="uploadForm" action="doajaxfileupload.php" method="post" enctype="multipart/form-data" class="regisrize padding_auto">
           <input name="MAX_FILE_SIZE" value="1000000" type="hidden"/>
-          File: <input name="fileToUpload[]" id="fileToUpload" class="MultiFile regisrize_input_loading" type="file" />
+          <input name="fileToUpload[]" id="fileToUpload" class="MultiFile regisrize_input_loading" type="file" />
           <input type="submit" value="Загрузить" class="regisrize_input regisrize_submit" name="loading"/>
         </form>
-        <img class="loading_gif" src="img/loading1.gif" />   
+        <div class="loading_images">
+          <span class="bird font_family_montserrat">Сейчас вылетит птичка..</span>
+          <img class="loading_gif" src="img/loading2.gif" />
+        </div>
         <div id="uploadOutput"></div> 
+        <h2 class="title font_family_montserrat title_padding">Загружайте фотографии в ваш альбом!</h2>
       </div>
     </div>
-    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-    <script type="text/javascript" src="js/menu_selector.js"></script>
-		<script type="text/javascript" src="js/jquery.MultiFile.js"></script>
-		<script type="text/javascript" src="js/jquery.form.js"></script>
-		<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.MultiFile.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.blockUI.js"></script>
     <script type="text/javascript" src="js/upload.js"></script>
   </body>  
 </html>

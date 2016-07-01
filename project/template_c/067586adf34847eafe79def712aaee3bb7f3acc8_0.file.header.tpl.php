@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-01 04:11:08
+/* Smarty version 3.1.29, created on 2016-07-01 11:59:37
   from "Z:\home\test1.ru\www\backend\project\template\header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5775b51c91ce63_39131243',
+  'unifunc' => 'content_577622e989fce3_87951005',
   'file_dependency' => 
   array (
     '067586adf34847eafe79def712aaee3bb7f3acc8' => 
     array (
       0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\template\\header.tpl',
-      1 => 1467331860,
+      1 => 1467359893,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5775b51c91ce63_39131243 ($_smarty_tpl) {
+function content_577622e989fce3_87951005 ($_smarty_tpl) {
 ?>
 <div class="header">
   <div class="center_block"> 
@@ -30,7 +30,7 @@ function content_5775b51c91ce63_39131243 ($_smarty_tpl) {
     <div class="menu_block_header menu_block_header_user">
       <ul class="menu_top_block">
         <li class="menu_top_block_li" id="first_element">
-          <a href="intropage.html" class="text_white color_white font_family_montserrat">Создать альбом</a>
+          <a href="intropage.php" class="text_white color_white font_family_montserrat">Создать альбом</a>
         </li> 
         <li class="menu_top_block_li" id="second_element">
           <a href="my_albums.php" class="text_white font_family_montserrat color_white active">Мои альбомы</a>
@@ -39,7 +39,7 @@ function content_5775b51c91ce63_39131243 ($_smarty_tpl) {
           <a href="#" class="text_white font_family_montserrat color_white">Редактировать</a>
         </li>
         <li>
-          <a href="logout.php" class="text_white font_family_montserrat color_white">Выйти</a>
+          <a href="php/logout.php" class="text_white font_family_montserrat color_white">Выйти</a>
         </li>
       </ul>
     </div>

@@ -71,9 +71,9 @@ $.blockUI.defaults = {
         top:            '40%', 
         left:           '35%', 
         textAlign:      'center', 
-        color:          '#000', 
+        color:          '#fff', 
         border:         '3px solid #aaa',
-        backgroundColor:'#fff',
+        backgroundColor: '#4B0082',
         cursor:         'wait'
     },
     
@@ -94,7 +94,7 @@ $.blockUI.defaults = {
 	    opacity:  '0.6',
 		cursor:    null,
 	    color:    '#fff',
-	    backgroundColor: '#000',
+	    backgroundColor: '#4B0082',
 	    '-webkit-border-radius': '10px',
 	    '-moz-border-radius':    '10px'
 	},

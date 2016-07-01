@@ -1,7 +1,8 @@
 <?php
-    require_once('../include/connection.inc.php');
-    require_once('../include/database.inc.php');
-    require_once('../index.php');
+    require_once('index.php');
+    require_once('include/connection.inc.php');
+    require_once('include/database.inc.php');
+    $message = "Вы успешно зарегестрированы!";
     if (isset($_POST['register']))
     {
         if (!empty($_POST['email']) && !empty($_POST['username']) && !empty($_POST['password'])) 
@@ -13,8 +14,8 @@
         }
         else
         {
-            $message = "Заполните все поля,пожалуйста!";
+            $message = "Вы не зарегестрированы!Заполните все поля,пожалуйста!";
         }
     }
     $g_smarty->assign("mail", $message);
-    $g_smarty->display("../template/registr.tpl");
+    $g_smarty->display("registr.tpl");

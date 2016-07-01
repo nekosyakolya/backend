@@ -34,7 +34,7 @@
       message: s.replace(/\n/gi,'<br/>'),
       css: { 
        border:'none', padding:'15px', size:'12.0pt',
-       backgroundColor:'#900', color:'#fff',
+       backgroundColor:'#4B0082', color:'#fff',
        opacity:'.8','-webkit-border-radius': '10px','-moz-border-radius': '10px'
       }
      });

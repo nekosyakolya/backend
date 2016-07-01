@@ -6,6 +6,6 @@
   </head>
   <body>
     <h2>Ошибка!</h2>
-    <a href="album.html">Я исправлюсь!</a>
+    <a href="../index.php">Я исправлюсь!</a>
    </body>  
 </html>
