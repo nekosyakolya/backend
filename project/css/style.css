@@ -402,12 +402,15 @@ a
 { 
     width: 100%;
     background-color: #1e192c;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 #sliderNew
 { 
-    width:940px;
-    height:360px;
+    margin: 0 auto;
+    width: 42%;
+    height: 600px;
     overflow: hidden;
     position:relative;
 }
@@ -420,14 +423,26 @@ a
 
 .pad_arrow
 {
-    padding-top: 63px;
-    margin-right: 73px;
+    padding-left: 321px;
+    margin-right: 98px;
+}
+
+.pad_arrow_right
+{
+    padding-top: 153px;
+}
+
+.title_padding
+{
+    margin-bottom: 50px;
+    padding-top: 140px;;
 }
 
 .sprait2
 {
     background: url("../img/resultat.png");
 }
+
 #nextbutton
 {
     background-position: 0 -767px;
@@ -437,7 +452,7 @@ a
     cursor: pointer;
 }
 
-}
+
 #prewbutton
 {
     background-position: 0 -735px;
@@ -445,4 +460,9 @@ a
     height: 22px;
     display: block;
     cursor: pointer;
+}
+
+.img_big
+{
+  width: 87%;
 }

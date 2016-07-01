@@ -46,14 +46,18 @@
                 $error = 'No file was uploaded..';
             }else 
             {
-                    move_uploaded_file($_FILES[$fileElementName]['tmp_name'][$i], "images/full/" . $_FILES[$fileElementName]['name'][$i]);
+                   move_uploaded_file($_FILES[$fileElementName]['tmp_name'][$i], "images/tmp/" . $_FILES[$fileElementName]['name'][$i]);
+                  
+                  createFullnail($_FILES[$fileElementName]['name'][$i]);
                   createThumbnail($_FILES[$fileElementName]['name'][$i]);
+                  $wayTmp = "images/tmp/" . $_FILES[$fileElementName]['name'][$i];
                   $wayFull = "images/full/" . $_FILES[$fileElementName]['name'][$i];
                   $wayThumbs= "images/thumbs/" . $_FILES[$fileElementName]['name'][$i];
                   $id_album = $_SESSION["id_album"];
                   addNewFile($id_album, $wayFull, $wayThumbs);
                   
                     //for security reason, we force to remove all uploaded file
+                     @unlink($wayTmp);
                     @unlink($_FILES[$fileElementName][$i]);
             }
             if ($error)

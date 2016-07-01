@@ -3,14 +3,15 @@
   <div class="description">
     <div class="center_block back_white">
       {foreach from=$img_array item=img name=foo}
+        {if $smarty.foreach.foo.index % 3 == 0 && $smarty.foreach.foo.index != 0}
+          <div class="clear"></div>
+        {/if}
         <div class="center_div float_left">
           <a href="big_img.php?id={$smarty.foreach.foo.index}"  class="decoration"><img src="{$img}" class="img_thumbs" alt="loading" /></a>
         </div>
-        {if $smarty.foreach.foo.index % 2 == 0 && $smarty.foreach.foo.index != 0}
-          <div class="clear"></div>
-        {/if}
       {foreachelse}
-        <h2 class="title font_family_montserrat">Пока что у вас нет фото:(</h2>
+        <h2 class="title font_family_montserrat title_padding">РџРѕРєР° С‡С‚Рѕ Сѓ РІР°СЃ РЅРµС‚ С„РѕС‚Рѕ:(</h2>
+        <a href="intropageMyAlbum.html" class="title font_family_montserrat">Р—Р°РіСЂСѓР·РёС‚СЊ!</a>
       {/foreach}
       <div class="clear"></div>
     </div>

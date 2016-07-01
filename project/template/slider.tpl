@@ -1,7 +1,7 @@
 {extends file='layout.tpl'}
 {block name="main_content"}
   <div id="slider-wrap">
-    <div class="pad_arrow float_left">
+    <div class="pad_arrow float_left pad_arrow_right">
       <a class="sprait2" id="prewbutton"></a>
     </div>
     <div id="sliderNew" class="float_left">
@@ -16,7 +16,7 @@
           {/if}
       {/foreach}
     </div>
-    <div class="arrow_r_pad float_left">
+    <div class="pad_arrow_right float_left">
       <a class="sprait2" id="nextbutton"></a>
     </div>
     <div class="clear"></div>

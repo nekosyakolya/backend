@@ -8,7 +8,8 @@
           <a href="album_img.php?name={$album}" class="title font_family_montserrat">{$album}</a>
         </div>
       {foreachelse}
-        <h2 class="title font_family_montserrat">У вас нет альбомов:(</h2>
+        <h2 class="title font_family_montserrat title_padding">У вас нет альбомов:(</h2>
+        <a href="intropage.html" class="title font_family_montserrat">Создать!</a>
       {/foreach}
     </div>
   </div>
