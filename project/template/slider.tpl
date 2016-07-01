@@ -25,5 +25,5 @@
 {block name="scripts"}
   <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
   <script type="text/javascript" src="js/menu_selector.js"></script>
-  <script type="text/javascript" src="js/1204.js"></script>
+  <script type="text/javascript" src="js/slider_album.js"></script>
 {/block}
