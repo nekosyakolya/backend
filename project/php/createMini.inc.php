@@ -35,11 +35,16 @@
         $final_width_of_image = 600;
         $path_to_image_directory = 'images/tmp/';
         $path_to_thumbs_directory = 'images/full/';
-        if(preg_match('/[.](jpg)$/', $filename)) {
+        if(preg_match('/[.](jpg)$/', $filename))
+        {
           $im = imagecreatefromjpeg($path_to_image_directory . $filename);
-        } else if (preg_match('/[.](gif)$/', $filename)) {
+        }
+        elseif (preg_match('/[.](gif)$/', $filename))
+        {
           $im = imagecreatefromgif($path_to_image_directory . $filename);
-        } else if (preg_match('/[.](png)$/', $filename)) {
+        }
+        elseif (preg_match('/[.](png)$/', $filename))
+        {
           $im = imagecreatefrompng($path_to_image_directory . $filename);
         } 
 
@@ -52,12 +57,6 @@
         $nm = imagecreatetruecolor($nx, $ny);
         
         imagecopyresized($nm, $im, 0,0,0,0,$nx,$ny,$ox,$oy);
-        
-        if(!file_exists($path_to_thumbs_directory)) {
-          if(!mkdir($path_to_thumbs_directory)) {
-                 die("Возникли проблемы! попробуйте снова!");
-          } 
-             }
 
         imagejpeg($nm, $path_to_thumbs_directory . $filename);
     };
