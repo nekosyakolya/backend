@@ -48,7 +48,7 @@
         return ($numrows != 0);
     }
     
-    function getId($username, $password)
+    function getIdUser($username, $password)
     {
         $query = mysql_query("SELECT id FROM usertable WHERE username='".$username."' AND password='".$password."'");
         if (mysql_num_rows($query) != 0)

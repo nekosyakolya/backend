@@ -2,7 +2,7 @@
     require_once('index.php');
     require_once('include/connection.inc.php');
     require_once('include/database.inc.php');
-    $message = "Вы успешно зарегестрированы!";
+    $success = false;
     if (isset($_POST['register']))
     {
         if (!empty($_POST['email']) && !empty($_POST['username']) && !empty($_POST['password'])) 
@@ -11,11 +11,7 @@
             $email = htmlspecialchars($_POST['email']);
             $password = md5(htmlspecialchars($_POST['password']));
             $message = addInUserTable($username, $email, $password);
-        }
-        else
-        {
-            $message = "Вы не зарегестрированы!Заполните все поля,пожалуйста!";
+            $success = true;
         }
     }
-    $g_smarty->assign("mail", $message);
-    $g_smarty->display("registr.tpl");
+    
