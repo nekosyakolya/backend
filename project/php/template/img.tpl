@@ -1,4 +1,4 @@
-{extends file='layout.tpl'}
+{extends file='layout_create.tpl'}
 {block name="main_content"}
   <div class="description">
     <div class="center_block back_white">

@@ -3,6 +3,7 @@
     require_once("../include/connection.inc.php");
     require_once("../include/database.inc.php");
     require_once("../include/createMini.inc.php"); 
+    
     if (isset($_POST["loading"]))
     {
         $error = "";
@@ -46,6 +47,7 @@
                 $error = 'No file was uploaded..';
             }else
             {
+                 $name = ;
                  move_uploaded_file($_FILES[$fileElementName]['tmp_name'][$i], "../images/tmp/" . $_FILES[$fileElementName]['name'][$i]);
                  createFullnail($_FILES[$fileElementName]['name'][$i]);
                  createThumbnail($_FILES[$fileElementName]['name'][$i]);

@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-01 04:24:53
-  from "Z:\home\test1.ru\www\backend\project\template\img.tpl" */
+/* Smarty version 3.1.29, created on 2016-07-08 00:16:19
+  from "Z:\home\test1.ru\www\backend\project\php\template\img.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5775b855c71b28_71463069',
+  'unifunc' => 'content_577eb893bab9f3_19226401',
   'file_dependency' => 
   array (
-    '50a5d39e716da7fa6e8eb8bd097b2af63e71415a' => 
+    'a6b44e5b5d2c5471b1ed0af29b8e34b77d21a795' => 
     array (
-      0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\template\\img.tpl',
-      1 => 1467332444,
+      0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\php\\template\\img.tpl',
+      1 => 1467922473,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:layout.tpl' => 1,
+    'file:layout_create.tpl' => 1,
   ),
 ),false)) {
-function content_5775b855c71b28_71463069 ($_smarty_tpl) {
+function content_577eb893bab9f3_19226401 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", array (
-  0 => 'block_212285775b855775925_08945593',
+  0 => 'block_7066577eb893931277_14924336',
   1 => false,
   3 => 0,
   2 => 0,
@@ -35,16 +35,16 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", a
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "scripts", array (
-  0 => 'block_262935775b855c3d928_38627208',
+  0 => 'block_23755577eb893b80df9_59714663',
   1 => false,
   3 => 0,
   2 => 0,
 ));
 $_smarty_tpl->ext->_inheritance->endChild($_smarty_tpl);
-$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
+$_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout_create.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'main_content'}  file:img.tpl */
-function block_212285775b855775925_08945593($_smarty_tpl, $_blockParentStack) {
+function block_7066577eb893931277_14924336($_smarty_tpl, $_blockParentStack) {
 ?>
 
   <div class="description">
@@ -68,7 +68,7 @@ $__foreach_foo_0_saved_local_item = $_smarty_tpl->tpl_vars['img'];
           <div class="clear"></div>
         <?php }?>
         <div class="center_div float_left">
-          <a href="big_img.php?id=<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null);?>
+          <a href="../php/big_img.php?id=<?php echo (isset($_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_foo']->value['index'] : null);?>
 "  class="decoration"><img src="<?php echo $_smarty_tpl->tpl_vars['img']->value;?>
 " class="img_thumbs" alt="loading" /></a>
         </div>
@@ -78,7 +78,7 @@ $_smarty_tpl->tpl_vars['img'] = $__foreach_foo_0_saved_local_item;
 if (!$_smarty_tpl->tpl_vars['img']->_loop) {
 ?>
         <h2 class="title font_family_montserrat title_padding">Пока что у вас нет фото:(</h2>
-        <a href="intropageMyAlbum.html" class="title font_family_montserrat">Загрузить!</a>
+        <a href="php/intropage.php" class="title font_family_montserrat">Загрузить!</a>
       <?php
 }
 if ($__foreach_foo_0_saved) {
@@ -95,7 +95,7 @@ $_smarty_tpl->tpl_vars['img'] = $__foreach_foo_0_saved_item;
 }
 /* {/block 'main_content'} */
 /* {block 'scripts'}  file:img.tpl */
-function block_262935775b855c3d928_38627208($_smarty_tpl, $_blockParentStack) {
+function block_23755577eb893b80df9_59714663($_smarty_tpl, $_blockParentStack) {
 ?>
 
   <?php echo '<script'; ?>

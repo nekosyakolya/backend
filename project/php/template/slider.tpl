@@ -1,4 +1,4 @@
-{extends file='layout.tpl'}
+{extends file='layout_create.tpl'}
 {block name="main_content"}
   <div id="slider-wrap">
     <div class="pad_arrow float_left pad_arrow_right">

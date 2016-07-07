@@ -1,16 +1,16 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-06-30 04:28:18
-  from "Z:\home\test1.ru\www\backend\project\template\layout.tpl" */
+/* Smarty version 3.1.29, created on 2016-07-08 00:11:51
+  from "Z:\home\test1.ru\www\backend\project\php\template\layout.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_577467a2879a72_18748098',
+  'unifunc' => 'content_577eb787ec2a57_19855239',
   'file_dependency' => 
   array (
-    '398e90685d7b188486b07fc42b9e596558ac075a' => 
+    '9bfb4fb9e3e36d7ddfc4b488057ea1f3d9e3d873' => 
     array (
-      0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\template\\layout.tpl',
+      0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\php\\template\\layout.tpl',
       1 => 1467237814,
       2 => 'file',
     ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_577467a2879a72_18748098 ($_smarty_tpl) {
+function content_577eb787ec2a57_19855239 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE html> 
@@ -36,7 +36,7 @@ $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, false);
 
     <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", array (
-  0 => 'block_25446577467a279e605_93684085',
+  0 => 'block_29507577eb787e09c60_74890506',
   1 => false,
   3 => 0,
   2 => 0,
@@ -48,7 +48,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", a
 
     <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "scripts", array (
-  0 => 'block_5799577467a2836306_74775208',
+  0 => 'block_11712577eb787e8ee82_53288660',
   1 => false,
   3 => 0,
   2 => 0,
@@ -58,11 +58,11 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "scripts", array 
   </body>
 </html><?php }
 /* {block 'main_content'}  file:layout.tpl */
-function block_25446577467a279e605_93684085($_smarty_tpl, $_blockParentStack) {
+function block_29507577eb787e09c60_74890506($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'main_content'} */
 /* {block 'scripts'}  file:layout.tpl */
-function block_5799577467a2836306_74775208($_smarty_tpl, $_blockParentStack) {
+function block_11712577eb787e8ee82_53288660($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'scripts'} */
 }
