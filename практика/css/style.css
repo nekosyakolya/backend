@@ -171,7 +171,8 @@ img
 .list.menu .element
 {
     font: 500 14px/18px Tahoma, Arial, sans-serif;
-    background-image: linear-gradient(to bottom, #fefefe, #eff0f0);
+    /*background-image: linear-gradient(to bottom, #fefefe, #eff0f0);*/
+    background: #f4f4f4;
     margin-right: 1px;
     float: left;
 }
@@ -199,8 +200,8 @@ img
 
 .element_container
 {
-    padding-left: 2px;
-    background-image: linear-gradient(to bottom, #fefefe, #eff0f0);
+    margin-left: 2px;
+    background: #f4f4f4;
 }
 
 .menu_dropdown .link
@@ -235,6 +236,12 @@ img
     font-size: 12px;
     color: #343434;
     line-height: 17px;
+}
+
+.header_bar_user_entrance:hover,
+.header_bar_star_register:hover
+{
+    text-decoration: none;
 }
 
 .header_bar_user
