@@ -26,7 +26,7 @@ $(document).ready(function()
     {
       success: function(data)
       {
-           document.location.href = 'http://test1.ru/project/project/php/my_albums.php';
+           document.location.href = 'http://test1.ru/backend/project/php/my_albums.php';
       }
     });
 });

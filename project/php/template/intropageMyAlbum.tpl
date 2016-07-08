@@ -1,4 +1,4 @@
-{extends file='layout_home.tpl'}
+{extends file='layout.tpl'}
 {block name="main_content"}
   <div class="header">
       <div class="center_block"> 

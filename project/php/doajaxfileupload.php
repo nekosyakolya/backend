@@ -47,13 +47,15 @@
                 $error = 'No file was uploaded..';
             }else
             {
-                 $name = ;
-                 move_uploaded_file($_FILES[$fileElementName]['tmp_name'][$i], "../images/tmp/" . $_FILES[$fileElementName]['name'][$i]);
-                 createFullnail($_FILES[$fileElementName]['name'][$i]);
-                 createThumbnail($_FILES[$fileElementName]['name'][$i]);
-                 $wayTmp = "../images/tmp/" . $_FILES[$fileElementName]['name'][$i];
-                 $wayFull = "../images/full/" . $_FILES[$fileElementName]['name'][$i];
-                 $wayThumbs= "../images/thumbs/" . $_FILES[$fileElementName]['name'][$i];
+                 $extension = strtolower(substr(strrchr($_FILES[$fileElementName]['name'][$i], '.'), 1));
+                 $filename = substr(md5(microtime() . rand(0, 9999)), 1, 10);
+                 $name = $filename . '.' . $extension;
+                 move_uploaded_file($_FILES[$fileElementName]['tmp_name'][$i], "../images/tmp/" . $name);
+                 createFullnail($name);
+                 createThumbnail($name);
+                 $wayTmp = "../images/tmp/" . $name;
+                 $wayFull = "../images/full/" . $name;
+                 $wayThumbs= "../images/thumbs/" . $name;
                  $id_album = $_SESSION["id_album"];
                  addNewFile($id_album, $wayFull, $wayThumbs);
                  @unlink($wayTmp);
@@ -65,5 +67,4 @@
             };
 
         };
-        header("Location: intropage.php");
     }
