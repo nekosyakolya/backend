@@ -156,7 +156,7 @@ img
 
 .list,
 .popular_post,
-.block nav ul,
+.navigation ul,
 .basement_list,
 .footer_list,
 .menu_top_block li ul
@@ -638,7 +638,7 @@ input
     color: #323232;
 }
 
-.navigation_botton
+.navigation_button
 {
     padding: 6px 9px 5px 9px;
     background: #3279BB;
