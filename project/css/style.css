@@ -23,6 +23,11 @@
     padding: 0;
 }
 
+.open_block
+{
+    display: block;
+}
+
 .camera
 {
     background: url("../img/camera.png");
@@ -496,7 +501,7 @@ a
 }
 span.file
 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
     color: #fff;
     display: block;
 }
@@ -504,7 +509,7 @@ span.file
 .unblockUI
 {
     color: #fff;
-    background-color: #4B0082;
+    background-color: #4b0082;
 }
 
 .padding_auto
@@ -512,9 +517,13 @@ span.file
     padding-bottom: 40px;
 }
 
+.message
+{
+    text-align: center;
+    color: #ff0000;
+}
+
 .hint
 {
     display: none;
-    color: red;
-    text-align: center;
 }

@@ -1,21 +1,27 @@
+var form = $("#register_form");
+var block = $("#success_register");
+var error_block = $("#error_register");
+
 $(document).ready(function()
 {
-     $("#register_form").submit(function()
+     form.submit(function()
      { 
-          var form_data = $("#register_form").serializeArray();
+          var form_data = form.serializeArray();
           $.ajax(
           {
-              type: "POST", 
+              type: "post", 
               url: "php/register.php",
               data: form_data,
               success: function(data)
               {
-                  $('#success_register').html(data);
-                  $('#success_register').css("display", "block");
+                  block.html(data);
+                  block.removeClass("hint"); 
+                  block.addClass("open_block");
               },
               error: function()
               {
-                  $('#error_register').css("display", "block");  
+                  error_block.removeClass("hint"); 
+                  error_block.addClass("open_block");  
               }
           });
           return false; 

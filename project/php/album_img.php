@@ -8,6 +8,6 @@
     if (isset($_SESSION["id_user"]))
     {
         $_SESSION["id_album"] = getIdAlbum($_SESSION["id_user"], $title);
-        $g_smarty->assign("img_array", getImgWay($_SESSION["id_album"]));
+        $g_smarty->assign("img_array", getImgPath($_SESSION["id_album"]));
         $g_smarty->display("img.tpl");
     }

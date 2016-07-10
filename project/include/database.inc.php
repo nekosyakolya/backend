@@ -16,14 +16,14 @@
         return $success;
     }
     
-    function validation($username, $password)
+    function validationUser($username, $password)
     {
         $query = mysql_query("SELECT * FROM usertable WHERE username='".$username."' AND password='".$password."'");
         $numrows = mysql_num_rows($query);
         return ($numrows != 0);
     }
     
-    function addNewPassword($username, $email, $password)
+    function updatePassword($username, $email, $password)
     {
         $query = mysql_query("SELECT * FROM usertable WHERE username='".$username."' AND email='".$email."'");
         $numrows = mysql_num_rows($query); 
@@ -49,35 +49,35 @@
         }
     }
     
-    function getIdAlbum($id, $title)
+    function getIdAlbum($owner_id, $title)
     {
-        $query = mysql_query("SELECT album_id FROM album WHERE owner_id='".$id."' AND title='".$title."'");
+        $query = mysql_query("SELECT album_id FROM album WHERE owner_id='".$owner_id."' AND title='".$title."'");
         if (mysql_num_rows($query) != 0)
         {
           return mysql_result($query, 0);
         }
     }
     
-    function createNewAlbum($id, $title)
+    function createNewAlbum($owner_id, $title)
     {
-        $query = mysql_query("SELECT title FROM album WHERE owner_id='".$id."' AND title='".$title."'");
+        $query = mysql_query("SELECT title FROM album WHERE owner_id='".$owner_id."' AND title='".$title."'");
         if (mysql_num_rows($query) == 0)
         {
           mysql_query("INSERT INTO album(owner_id, title)
-            VALUES('$id', '$title')");
+            VALUES('$owner_id', '$title')");
         }
     }
     
-    function addNewFile($id_album, $uploadfile, $wayThumbs)
+    function addNewFile($id_album, $img_full_path, $img_thumbs_path)
     {
         mysql_query("INSERT INTO images(album_id, img_full_way, img_thumbs_way)
-            VALUES('$id_album', '$uploadfile', '$wayThumbs')");
+            VALUES('$id_album', '$img_full_path', '$img_thumbs_path')");
     }
     
-    function getUserAlbums($id)
+    function getUserAlbums($owner_id)
     {
-        $result[] = "";
-        $query = mysql_query("SELECT title FROM album WHERE owner_id='".$id."' ORDER BY title ASC");
+        $result = array();
+        $query = mysql_query("SELECT title FROM album WHERE owner_id='".$owner_id."' ORDER BY title ASC");
         $n = mysql_num_rows($query);
         if (mysql_num_rows($query) != 0)
         {
@@ -89,10 +89,10 @@
         }
     }
     
-    function getImgWay($id)
+    function getImgPath($album_id)
     {
-        $result[] = "";
-        $query = mysql_query("SELECT img_thumbs_way FROM images WHERE album_id='".$id."'");
+        $result = array();
+        $query = mysql_query("SELECT img_thumbs_way FROM images WHERE album_id='".$album_id."'");
         $n = mysql_num_rows($query);
         if (mysql_num_rows($query) != 0)
         {
@@ -104,10 +104,10 @@
         }
     }
     
-    function getFullImgWay($id)
+    function getFullImgPath($album_id)
     {
-        $result[] = "";
-        $query = mysql_query("SELECT img_full_way FROM images WHERE album_id='".$id."'");
+        $result = array();
+        $query = mysql_query("SELECT img_full_way FROM images WHERE album_id='".$album_id."'");
         $n = mysql_num_rows($query);
         if (mysql_num_rows($query) != 0)
         {

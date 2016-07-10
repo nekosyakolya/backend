@@ -6,8 +6,9 @@
     
     if (isset($_SESSION["id_album"]))
     {
-         $array = getFullImgWay($_SESSION["id_album"]);
-         $g_smarty->assign("img_array", getFullImgWay($_SESSION["id_album"]));
+         $array = array();
+         $array = getFullImgPath($_SESSION["id_album"]);
+         $g_smarty->assign("img_array", $array);
          $g_smarty->assign("img_index", $_GET['id']);
          $g_smarty->assign("img_first", $array[$_GET['id']]);
          $g_smarty->display("slider.tpl");

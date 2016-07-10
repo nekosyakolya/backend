@@ -61,19 +61,21 @@
             <input id="password" name="password" type="password" maxlength="40" placeholder="Пароль" class="regisrize_input" />
             <input type="submit" value="Зарегистрироваться" class="regisrize_input regisrize_submit" id="register" name= "register" />
             <a href="#entrance" class="password authorized">Уже зарегестрированы?</a>
-            <a class="hint" id="success_register">Регистрация прошла успешно!</a>
-            <a class="hint" id="error_register">Ошибка!</a>
+            <a class="hint message" id="success_register">Регистрация прошла успешно!</a>
+            <a class="hint message" id="error_register">Ошибка!</a>
           </form>
         </section>
       </div>
       <section class="center_block back_white about_us_entrance" id="entrance">
         <div id="entrance_forma">
           <h2 class="title font_family_montserrat">Войти</h2>
-          <form action="php/login.php" name="questionnaire" method="post" class="regisrize entrance_form" id="login">
+          <form action="" name="questionnaire" method="post" class="regisrize entrance_form" id="login">
             <input type="text" maxlength="40" name="username" placeholder="Имя пользователя" class="regisrize_input" />
             <input type="password" maxlength="40" placeholder="Пароль" name="password" class="regisrize_input" />
             <input type="submit" value="Войти" name="login" class="regisrize_input regisrize_submit" />
             <a href="php/recovery.php" class="password">Забыли пароль?</a>
+            <a class="hint message" id="success_login"></a>
+            <a class="hint message" id="error_login">Ошибка!</a>
           </form>
         </div>
       </section>
@@ -87,7 +89,8 @@
     </div>
     <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
     <script type="text/javascript" src="js/menu_selector.js"></script>
-    <script type="text/javascript" src="js/registr.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/registr.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
   </body>  
 </html>
