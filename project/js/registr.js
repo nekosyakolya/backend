@@ -1,12 +1,12 @@
-var form = $("#register_form");
+var register = $("#register_form");
 var block = $("#success_register");
 var error_block = $("#error_register");
 
 $(document).ready(function()
 {
-     form.submit(function()
+     register.submit(function()
      { 
-          var form_data = form.serializeArray();
+          var form_data = register.serializeArray();
           $.ajax(
           {
               type: "post", 

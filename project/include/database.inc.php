@@ -89,25 +89,10 @@
         }
     }
     
-    function getImgPath($album_id)
+    function getImgPath($album_id, $path)
     {
         $result = array();
-        $query = mysql_query("SELECT img_thumbs_way FROM images WHERE album_id='".$album_id."'");
-        $n = mysql_num_rows($query);
-        if (mysql_num_rows($query) != 0)
-        {
-            for ($i = 0; $i < $n; $i++)
-            {
-                $result[$i] = mysql_result($query, $i);
-            }
-            return $result;
-        }
-    }
-    
-    function getFullImgPath($album_id)
-    {
-        $result = array();
-        $query = mysql_query("SELECT img_full_way FROM images WHERE album_id='".$album_id."'");
+        $query = mysql_query("SELECT ".$path." FROM images WHERE album_id='".$album_id."'");
         $n = mysql_num_rows($query);
         if (mysql_num_rows($query) != 0)
         {

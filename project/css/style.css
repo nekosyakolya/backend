@@ -138,6 +138,7 @@ body
 {
     width: 100%;
     margin: auto;
+    background-color: #1e192c;
 }
 
 .menu_block_header
@@ -153,6 +154,7 @@ body
   margin: 0 auto;
   text-align: center;
   display: block;
+  cursor: pointer;
 }
 
 .img_thumbs
@@ -214,16 +216,19 @@ a
 {
     padding-left: 9px;
 }
+
 .center_header
 {
     margin: 0 auto;
     text-align: center;
     margin-bottom: 157px;
 }
+
 .description
 {
     background-color: #1e192c;
 }
+
 .back_white
 {
      background-color: white;

@@ -7,7 +7,7 @@
     if (isset($_SESSION["id_album"]))
     {
          $array = array();
-         $array = getFullImgPath($_SESSION["id_album"]);
+         $array = getImgPath($_SESSION["id_album"], 'img_full_way');
          $g_smarty->assign("img_array", $array);
          $g_smarty->assign("img_index", $_GET['id']);
          $g_smarty->assign("img_first", $array[$_GET['id']]);

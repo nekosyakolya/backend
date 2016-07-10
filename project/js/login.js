@@ -1,12 +1,12 @@
-var form = $("#login");
+var login = $("#login");
 var message = $("#success_login");
 var error_block = $("#error_login");
 
 $(document).ready(function()
 {
-     form.submit(function()
+     login.submit(function()
      { 
-          var form_data = form.serializeArray();
+          var form_data = login.serializeArray();
           $.ajax(
           {
               type: "post", 
