@@ -186,22 +186,17 @@ img
     border-bottom: 3px solid #afb2c1;
 }
 
-.list.menu .element.active > .element_container,
-.list.menu .element:hover > .element_container
-{
-    background: linear-gradient(to bottom, #f4f4f4, #ffffff);
-}
-
 .list.menu .element.active .item,
 .list.menu .element:hover .item
 {
     border-bottom: 3px solid #b31d27;
+    background: linear-gradient(to bottom, #f4f4f4, #fff);
 }
 
 .element_container
 {
-    margin: 0 0 0 2px;
-    background: #f4f4f4;
+    padding: 0 0 0 2px;
+    background: linear-gradient(to bottom, #f4f4f4, #e8eae9);
 }
 
 .menu_dropdown .link
@@ -234,7 +229,7 @@ img
 
 .bar .entrance
 {
-    margin: 0 14px 0 0;
+    margin: 0 16px 0 0;
     font-size: 11px;
     color: #343434;
     line-height: 17px;
@@ -334,7 +329,7 @@ img
 .note .time
 {
     margin: 0 20px 0 0;
-    float: left;
+    display: inline-block;
 }
 
 .note .link
@@ -343,7 +338,7 @@ img
     color: #858585;
     margin: 0 20px 0 0;
     cursor: pointer;
-    float: left;
+    display: inline-block;
 }
 
 .note .link:hover
@@ -367,7 +362,6 @@ img
     width: 12px;
     height: 13px;
     margin: 0 7px -4px 0;
-    float: left;
 }
 
 .text_content
@@ -383,6 +377,7 @@ img
     color: #354f71;
     text-decoration: underline;
     cursor:  pointer;
+    line-height: 15px;
 }
 
 .menu_links .link
@@ -399,13 +394,13 @@ img
 
 .text_content.last
 {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
 }
 .menu_links
 {
     list-style: disc;
     padding: 0 0 0 37px;
-    margin: 0 0 18px 0;
+    margin: 0 0 11px 0;
 }
 
 .marker
@@ -426,7 +421,7 @@ img
 
 .tags
 {
-    margin: 0 0 19px 0;
+    margin: 0 0 24px 0;
     font: 12px Tahoma, Helvetica, serif;
 }
 
@@ -500,7 +495,7 @@ img
 {
     content: '';
     display: block;
-    border-left: 9px solid #768FA5;
+    border-left: 9px solid #768fa5;
     border-bottom: 6px solid transparent;
     position: absolute;
     bottom: -4px;
@@ -508,7 +503,7 @@ img
 
 .widget_container.post
 {
-    padding: 26px 25px 9px 25px;
+    padding: 26px 25px 6px 25px;
     border: 0;
 }
 
@@ -541,15 +536,18 @@ img
     margin: 0 0 15px 0;
 }
 
-.widget_container > .title.search
+.widget_container > .title.blog_search
 {
-    padding: 0 0 0 7px;
+    padding: 0 0 0 5px;
+    font-size: 18px;
+    margin: 0 0 10px 0;
 }
 
 .widget_container > .title.post
 {
-    padding: 0 0 0 3px;
+    padding: 0 0 0 2px;
     margin: 0 0 21px 0;
+    font-size: 18px
 }
 
 input
@@ -565,6 +563,7 @@ input
     padding: 0 8px;
     box-shadow: inset 0 1px 4px 0 #eee;
     margin: 0 0 10px 0;
+    font-size: 14px;
 }
 
 .subscribe
@@ -602,6 +601,7 @@ input
     border-radius: 4px;
     padding: 0 8px;
     float: left;
+    font-size: 14px;
 }
 
 .search_submit
@@ -636,7 +636,7 @@ input
 
 .popular_post
 {
-    margin: 0 0 26px 0;
+    margin: 0 0 24px 0;
 }
 
 .block
@@ -686,12 +686,12 @@ input
     padding: 0 0 12px 0;
 }
 
-.basement
+.footer_navigation
 {
     background: radial-gradient(#1a4988, #013c7b);
 }
 
-.basement_title
+.container_menu .title
 {
     font: normal 18px 'Franklin Gothic Book', sans-serif;
     color: #fff;
@@ -700,12 +700,12 @@ input
     margin: 0 0 15px 0;
 }
 
-.basement_container
+.container_menu
 {
     padding: 38px 0 25px 40px;
 }
 
-.basement_container .item
+.container_menu .item
 {
     text-decoration: underline;
     font-size: 11px;
@@ -713,18 +713,18 @@ input
     line-height: 16px;
 }
 
-.basement_container .element
+.container_menu .element
 {
     margin: 0 0 8px 0;
 }
 
-.basement_block
+.container_column
 {
     margin: 0 60px 0 0;
     float: left;
 }
 
-.basement_container .item:hover
+.container_menu .item:hover
 {
     text-decoration: none;
 }
@@ -767,7 +767,7 @@ input
     display: inline-block;
 }
 
-.basement_phone
+.phone_number
 {
     font-size: 18px;
     color: #fff;
@@ -781,7 +781,7 @@ footer
     padding: 20px 0 30px 0;
 }
 
-.footer_logo
+.block_travel .logo
 {
     background: url('../img/footer-logo.png') no-repeat 0 0;
     width: 143px;
@@ -789,7 +789,7 @@ footer
     margin: 0 0 5px 0;
 }
 
-.footer_text
+footer .container .text
 {
     font-size: 11px;
     color: #4858a8;
@@ -925,7 +925,7 @@ footer .block_travel
     height: 72px;
 }
 
-.footer_windows
+.platform
 {
     text-align: right;
     margin: 0 10px 0 0;
@@ -933,13 +933,13 @@ footer .block_travel
     float: left;
 }
 
-.footer_text_windows
+.windows_server
 {
     color: #81afe2;
     display: block;
 }
 
-.footer_windows_block
+.block_windows
 {
     float: right;
 }
