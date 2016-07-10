@@ -278,7 +278,13 @@ img
 .block_img
 {
     position: relative;
+}
+
+.link_img
+{
     margin: 0 0 17px 0;
+    text-decoration: none;
+    display: block;
 }
 
 .box
