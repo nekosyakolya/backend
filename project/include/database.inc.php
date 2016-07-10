@@ -2,26 +2,18 @@
     function addInUserTable($username, $email, $password)
     {
         $query = mysql_query("SELECT * FROM usertable WHERE username='".$username."'");
-        $numrows = mysql_num_rows($query); 
+        $numrows = mysql_num_rows($query);
+        $success = false;
         if($numrows == 0)
         {
-            $sql="INSERT INTO usertable(email, username, password)
+            $sql = "INSERT INTO usertable(email, username, password)
             VALUES('$email', '$username', '$password')";
-            $result = mysql_query($sql);
-            if($result)
+            if($result = mysql_query($sql))
             {
-                $message = "Регистрация прошла успешно!";
+                $success = true;
             } 
-            else 
-            {
-                $message = "Не удалось сохранить данные!";
-            }
         }
-        else 
-        {
-            $message = "Это имя пользователя уже существует! Пожалуйста, попробуйте еще раз!";
-        }
-        return $message;
+        return $success;
     }
     
     function validation($username, $password)

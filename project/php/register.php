@@ -8,6 +8,10 @@
         $username = htmlspecialchars($_POST['username']);
         $email = htmlspecialchars($_POST['email']);
         $password = md5(htmlspecialchars($_POST['password']));
-        $message = addInUserTable($username, $email, $password);
+        $message = 'Ошибка при регистрации!';
+        if (addInUserTable($username, $email, $password))
+        {
+          $message = 'Регистрация прошла успешно!';
+        }
     }
     echo $message;
