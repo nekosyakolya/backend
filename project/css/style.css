@@ -157,6 +157,46 @@ body
   cursor: pointer;
 }
 
+.folder_block
+{
+    position: relative;
+}
+
+.folder_block:hover .close,
+.folder_block:hover .edit
+{
+    display: inline-block;
+}
+
+.close
+{
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/icons.png");
+    cursor: pointer;
+    top: 20px;
+    right: 4px;
+    display: none;
+    position: absolute;
+    z-index: 0;
+    text-decoration: none;
+}
+
+.edit
+{
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/edit.png");
+    cursor: pointer;
+    top: 20px;
+    right: 29px;
+    display: none;
+    position: absolute;
+    z-index: 0;
+    text-decoration: none;
+}
+
+
 .img_thumbs
 {
   width: 270px;

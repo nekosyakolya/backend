@@ -4,7 +4,11 @@
     <div class="center_block back_white">
       {foreach from=$title_array item=album}
         <div class="center_div">
-          <img src="../img/folder.png" class="folder" alt="loading" />
+          <div class="folder_block">
+            <a href="album_img.php?name={$album}" title ="Редактировать {$album}" class="edit"></a>
+            <a href="album_img.php?name={$album}" title ="Удалить {$album}" class="close"></a>
+            <img src="../img/folder.png" class="folder" alt="loading" />
+          </div>
           <a href="album_img.php?name={$album}" class="title font_family_montserrat">{$album}</a>
         </div>
       {foreachelse}
