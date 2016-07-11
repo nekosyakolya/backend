@@ -4,12 +4,10 @@
     require_once("../include/database.inc.php");
     require_once("index.php");
     
-    if (isset($_POST["createAlbum"]))
+    if (isset($_SESSION["id_user"]))
     {
-        $title = htmlspecialchars($_POST["nameAlbum"]);
         $id = $_SESSION["id_user"];
-        createNewAlbum($id, $title);
-        $_SESSION["id_album"] = getIdAlbum($id, $title);
+        $_SESSION["id_album"] = getIdAlbum($id, $_SESSION["name_album"]);
         $g_smarty->assign("name", $_SESSION["session_username"]);
         $g_smarty->display("intropageMyAlbum.tpl");
     }
