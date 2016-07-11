@@ -34,10 +34,18 @@
           <a class="hint message" id="success_edit">Регистрация прошла успешно!</a>
           <a class="hint message" id="error_edit">Ошибка!</a>
         </form>
+        <a class="title font_family_montserrat title_padding" id="delete">delete?</a>
+        <div id="podlogka" class="hint">
+          <div id="modalWindow">
+            <a id="yes">YES!</a>
+            <a id="no">NO!</a>
+          </div>
+        </div>
       </div>
     </div>
 {/block}
 {block name="scripts"}
   <script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
   <script type="text/javascript" src="../js/edit_name_album.js"></script>
+  <script type="text/javascript" src="../js/delete_album.js"></script>
 {/block}

@@ -43,6 +43,17 @@
         }
     }
     
+    function deleteAlbum($album_id)
+    {
+        $query = mysql_query("SELECT * FROM images WHERE album_id='".$album_id."'");
+        $numrows = mysql_num_rows($query); 
+        if($numrows != 0)
+        {
+            mysql_query('DELETE FROM images WHERE `album_id`="'.$album_id.'"');
+            mysql_query('DELETE FROM album WHERE `album_id`="'.$album_id.'"');
+        }
+    }
+    
     function validationRecovery($username, $email)
     {
         $query = mysql_query("SELECT * FROM usertable WHERE username='".$username."' AND email='".$email."'");
