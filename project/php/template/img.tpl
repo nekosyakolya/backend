@@ -11,13 +11,11 @@
         </div>
       {foreachelse}
         <h2 class="title font_family_montserrat title_padding">Пока что у вас нет фото:(</h2>
-        <a href="php/intropage.php" class="title font_family_montserrat">Загрузить!</a>
+        <a href="../php/add_img.php" class="title font_family_montserrat">Загрузить!</a>
       {/foreach}
       <div class="clear"></div>
     </div>
   </div>
 {/block}
 {block name="scripts"}
-  <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-  <script type="text/javascript" src="js/menu_selector.js"></script>
 {/block}

@@ -12,7 +12,7 @@
         </div>
       {foreachelse}
         <h2 class="title font_family_montserrat title_padding">У вас нет альбомов:(</h2>
-        <a href="../php/intropage.php" class="title font_family_montserrat">Создать!</a>
+        <a href="intropage.php" class="title font_family_montserrat">Создать!</a>
       {/foreach}
     </div>
   </div>

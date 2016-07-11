@@ -1,18 +1,31 @@
-var button = $(".contact_text");
+var button = $(".header .contact");
 var close = $(".close");
+var main = $(".support_block");
+var hidden = $(".open_block");
+var selector = false;
+
+
 button.click(function()
 {
-    close.css("display", "inline-block");
-    $(".support_block").addClass("white");
-    $(".support_block").addClass("allocation");
-    $(".open_block").css("display", "block");
-    $(".open_block").addClass("allocation");    
-});
-
-close.click(function()
-{
-    close.css("display", "none");
-    $(".support_block").removeClass("allocation"); 
-    $(".support_block").removeClass("white"); 
-    $(".open_block").css("display", "none");
+    if (!selector)
+    {
+        close.removeClass("hide");
+        close.addClass("show");
+        main.addClass("background");
+        main.addClass("allocation");
+        hidden.addClass("show");
+        hidden.removeClass("hide");
+        hidden.addClass("allocation");
+        selector = true;
+    }
+    else
+    {
+        close.addClass("hide");
+        close.removeClass("show");
+        main.removeClass("allocation"); 
+        main.removeClass("background"); 
+        hidden.addClass("hide");
+        hidden.removeClass("show");
+        selector = false;
+    }
 });

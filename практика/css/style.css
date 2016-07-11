@@ -112,7 +112,7 @@ img
 
 .catalog .button
 {
-    padding: 7px;
+    padding: 7px 7px 7px 8px;
     font: 13px/18px 'Franklin Gothic Book', sans-serif;
     text-decoration: none;
     text-align: center;
@@ -122,6 +122,7 @@ img
     border: 1px solid #6c8cd1;
     cursor: pointer;
     color: #fff;
+    margin: 0 -3px 0 0;
 }
 
 .catalog .button:hover
@@ -159,7 +160,7 @@ img
     position: absolute;
     z-index: 1;
     margin: 1px 0 0 0;
-    padding: 15px;
+    padding: 15px 15px 5px 15px;
     border: 1px solid #babdc9;
     box-shadow: 0 1px 3px 0 #b2b2b2;
 }
@@ -204,13 +205,13 @@ img
 
 .menu_dropdown > .point:hover
 {
-    background: #e5e5e5;
+    background: #f4f4f4;
     border-radius: 3px;
 }
 
 .menu_dropdown > .point
 {
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     padding: 9px 10px;
 }
 
@@ -422,41 +423,48 @@ img
 
 .tags
 {
-    margin: 0 0 19px 0;
+    margin: 0 0 16px 0;
     font: 12px/1.5 Tahoma, Helvetica, serif;
+}
+
+.tags.selection
+{
+    margin: 0 0 19px 0;
 }
 
 .list_facebook
 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url('../img/result.png') no-repeat 0 -85px;
+    width: 16px;
+    height: 22px;
+    background: url('../img/result.png') no-repeat 0 -52px;
     margin: 0 0 -4px 0;
 }
 
 .list_twitter
 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url('../img/result.png') no-repeat 0 -30px;
-    margin: 0 0 -4px 0;
+    width: 18px;
+    height: 18px;
+    background: url('../img/result.png') no-repeat 0 -103px;
+    margin: 0 0 -7px 0;
 }
 
 .list_vk
 {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url('../img/result.png') no-repeat 0 -58px;
+    width: 17px;
+    height: 22px;
+    background: url('../img/result.png') no-repeat 0 -78px;
     margin: 0 0 -4px 0;
 }
 
-.social_count .element
+.list_vk.selection,
+.list_google.selection,
+.list_classmate.selection,
+.list_twitter.selection
 {
-    display: inline-block;
-    margin: 0 2px 0 0;
+  margin: 0;
 }
 
 .social_count .item
@@ -468,24 +476,24 @@ img
 .item .list_vk,
 .item .list_facebook
 {
-    margin: 0 4px -4px 0;
+    margin: 0 4px -10px 0;
 }
 
 .list_google
 {
     display: inline-block;
-    width: 17px;
+    width: 16px;
     height: 20px;
-    background: url('../img/result.png') no-repeat 0 -113px;
+    background: url('../img/result.png') no-repeat 0 3px;
     margin: 0 0 -4px 0;
 }
 
 .list_classmate
 {
     display: inline-block;
-    width: 15px;
-    height: 20px;
-    background: url('../img/result.png') no-repeat -5px -1px;
+    width: 16px;
+    height: 21px;
+    background: url('../img/result.png') no-repeat -3px -23px;
     margin: 0 0 -4px 0;
 }
 
@@ -506,6 +514,12 @@ img
      float: right;
      margin: 0 12px 0 0;
      font: 12px Tahoma, Helvetica, serif;
+     padding: 3px 0 0 0;
+}
+
+.comment.selection
+{
+    padding: 0;
 }
 
 .contact_column,
@@ -656,13 +670,16 @@ input
     padding: 3px 5px;
     font-weight: normal;
     display: inline-block;
+}
+
+.popular_post .block_date
+{
     margin: 0 0 9px 0;
-    
 }
 
 .block.box
 {
-    padding: 64px 0 0 15px;
+    padding: 65px 0 0 15px;
 }
 
 .popular_post
@@ -721,7 +738,7 @@ input
 
 .navigation_block
 {
-    padding: 62px 0 14px 0;
+    padding: 58px 0 14px 0;
 }
 
 .footer_navigation
@@ -1009,18 +1026,22 @@ footer .block_travel
 
 .open_block
 {
-    padding: 0 15px 15px 15px;
+    padding: 0 16px 15px 15px;
     position: absolute;
     z-index: 1;
     background: #fff;
+    border-bottom: 2px solid #646464;
+}
+
+.hide
+{
     display: none;
-    border-bottom: 1px solid #babdc9;
 }
 
 .allocation
 {
-    border-left: 1px solid #babdc9;
-    border-right: 1px solid #babdc9;
+    border-right: 2px solid #646464;
+    box-shadow: 4px 5px 5px 0 #646464;
 }
 
 .open_block .title
@@ -1060,10 +1081,14 @@ footer .block_travel
     height: 11px;
     background: url(../img/icons.png) -212px -106px no-repeat;
     cursor: pointer;
-    display: none;
 }
 
-.white
+.background
 {
     background: #fff;
+}
+
+.show
+{
+    display: inline-block;
 }
