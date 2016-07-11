@@ -296,12 +296,12 @@ img
     box-sizing: border-box;
     width: 694px;
     bottom: 4px;
-    padding: 17px 30px 9px 30px;
+    padding: 17px 30px 12px 30px;
 }
 
 .record_block > .title
 {
-    margin: 0 0 19px 0;
+    margin: 0 0 18px 0;
 }
 
 .post_title
@@ -329,7 +329,7 @@ img
 
 .note .time
 {
-    margin: 0 20px 0 0;
+    margin: 0 16px 0 0;
     display: inline-block;
 }
 
@@ -337,7 +337,7 @@ img
 {
     text-decoration: none;
     color: #858585;
-    margin: 0 20px 0 0;
+    margin: 0 18px 0 0;
     cursor: pointer;
     display: inline-block;
 }
@@ -415,15 +415,15 @@ img
 
 .learn_more
 {
-    margin: 0 0 16px 0;
+    margin: 0 0 14px 0;
     display: inline-block;
     font: 14px/160% Verdana,Arial,sans-serif;
 }
 
 .tags
 {
-    margin: 0 0 20px 0;
-    font: 12px Tahoma, Helvetica, serif;
+    margin: 0 0 19px 0;
+    font: 12px/1.5 Tahoma, Helvetica, serif;
 }
 
 .list_facebook
@@ -504,7 +504,7 @@ img
 .comment
 {
      float: right;
-     margin: 0 22px 0 0;
+     margin: 0 12px 0 0;
      font: 12px Tahoma, Helvetica, serif;
 }
 
@@ -662,7 +662,7 @@ input
 
 .block.box
 {
-    padding: 60px 0 0 15px;
+    padding: 64px 0 0 15px;
 }
 
 .popular_post
@@ -675,10 +675,15 @@ input
     padding: 20px 0 0 0;
 }
 
+.last_text
+{
+    margin: 0;
+}
+
 .navigation_block > .title
 {
     font: 20px Tahoma, Verdana, Arial, sans-serif;
-    margin: 0 0 15px 0;
+    margin: 0 0 18px 0;
     padding: 1px 0;
     color: #323232;
 }
@@ -716,7 +721,7 @@ input
 
 .navigation_block
 {
-    padding: 60px 0 12px 0;
+    padding: 62px 0 14px 0;
 }
 
 .footer_navigation
@@ -730,12 +735,17 @@ input
     color: #fff;
     text-decoration: none;
     display: inline-block;
-    margin: 0 0 15px 0;
+    margin: 0 0 7px 0;
+}
+
+.container_menu .title.contact
+{
+    margin: 0 0 21px 0;
 }
 
 .container_menu
 {
-    padding: 38px 0 25px 40px;
+    padding: 38px 0 28px 40px;
 }
 
 .container_menu .item
@@ -748,13 +758,18 @@ input
 
 .container_menu .element
 {
-    margin: 0 0 8px 0;
+    margin: 0 0 4px 0;
 }
 
 .container_column
 {
-    margin: 0 60px 0 0;
+    margin: 0 85px 0 0;
     float: left;
+}
+
+.contact_column .element
+{
+    margin: 0 0 19px 0;
 }
 
 .container_menu .item:hover
@@ -762,9 +777,19 @@ input
     text-decoration: none;
 }
 
-.portfolio
+.container_column > .portfolio
 {
-    margin: 0 0 25px 0;
+    margin: 0 0 28px 0;
+}
+
+.container_column.portfolio
+{
+    margin: 0 44px 0 0;
+}
+
+.container_column.company
+{
+    margin: 0 114px 0 0;
 }
 
 .list .element.par
@@ -778,7 +803,7 @@ input
     background: url('../img/icons.png') no-repeat -200px -50px;
     width: 26px;
     height: 26px;
-    margin: 0 10px 0 0;
+    margin: 0 6px -9px 0;
     display: inline-block;
 }
 
@@ -787,7 +812,7 @@ input
     background: url('../img/icons.png') no-repeat -150px -50px;
     width: 26px;
     height: 26px;
-    margin: 0 10px 0 0;
+    margin: 0 10px -7px 0;
     display: inline-block;
 }
 
@@ -796,7 +821,7 @@ input
     background: url('../img/icons.png') no-repeat -200px 0;
     width: 26px;
     height: 26px;
-    margin: 0 10px 0 0;
+    margin: 0 6px -7px 0;
     display: inline-block;
 }
 
@@ -819,7 +844,7 @@ footer
     background: url('../img/footer-logo.png') no-repeat 0 0;
     width: 143px;
     height: 23px;
-    margin: 0 0 5px 0;
+    margin: 0 0 6px 0;
 }
 
 footer .container .text
@@ -832,13 +857,13 @@ footer .container .text
 footer .block_travel
 {
     padding: 0 0 0 20px;
-    margin: 0 80px 0 0;
+    margin: 0 97px 0 0;
     float: left;
 }
 
 .social .element
 {
-    margin: 0 8px 0 0;
+    margin: 0 4px 0 0;
     display: inline-block;
 }
 
@@ -942,12 +967,14 @@ footer .block_travel
 {
     cursor: pointer;
     float: left;
+    padding: 5px 0 0 0;
 }
 
 .list.social
 {
-    margin: 0 50px 0 0;
+    margin: 0 78px 0 0;
     float: left;
+    padding: 5px 0 0 0;
 }
 
 .windows
@@ -961,20 +988,23 @@ footer .block_travel
 .platform
 {
     text-align: right;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
     width: 130px;
     float: left;
+    padding: 12px 0 0 0;
 }
 
 .windows_server
 {
     color: #81afe2;
     display: block;
+    font-size: 11px;
 }
 
 .block_windows
 {
     float: right;
+    margin: 0 22px 0 0;
 }
 
 .open_block
