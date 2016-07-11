@@ -33,6 +33,16 @@
         }
     }
     
+    function updateAlbumName($album_id, $newTitle)
+    {
+        $query = mysql_query("SELECT * FROM album WHERE album_id='".$album_id."'");
+        $numrows = mysql_num_rows($query); 
+        if($numrows != 0)
+        {
+            mysql_query('UPDATE album SET `title`="' . $newTitle . '" WHERE `album_id`="'.$album_id.'"');
+        }
+    }
+    
     function validationRecovery($username, $email)
     {
         $query = mysql_query("SELECT * FROM usertable WHERE username='".$username."' AND email='".$email."'");
