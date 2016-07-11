@@ -9,4 +9,4 @@
         deleteAlbum($_SESSION["id_album"]);
         $message = "ypa";
     }
-    echo $message;
+    header("Location: http://test1.ru/backend/project/php/my_albums.php");

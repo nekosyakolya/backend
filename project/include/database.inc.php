@@ -50,7 +50,17 @@
         if($numrows != 0)
         {
             mysql_query('DELETE FROM images WHERE `album_id`="'.$album_id.'"');
-            mysql_query('DELETE FROM album WHERE `album_id`="'.$album_id.'"');
+        }
+        mysql_query('DELETE FROM album WHERE `album_id`="'.$album_id.'"');
+    }
+    
+    function deleteImg($img_id)
+    {
+        $query = mysql_query("SELECT * FROM images WHERE img_id='".$img_id."'");
+        $numrows = mysql_num_rows($query); 
+        if($numrows != 0)
+        {
+            mysql_query('DELETE FROM images WHERE `img_id`="'.$img_id.'"');
         }
     }
     
@@ -122,5 +132,29 @@
                 $result[$i] = mysql_result($query, $i);
             }
             return $result;
+        }
+    }
+    
+    function getImgId($album_id)
+    {
+        $result = array();
+        $query = mysql_query("SELECT img_id FROM images WHERE album_id='".$album_id."'");
+        $n = mysql_num_rows($query);
+        if (mysql_num_rows($query) != 0)
+        {
+            for ($i = 0; $i < $n; $i++)
+            {
+                $result[$i] = mysql_result($query, $i);
+            }
+            return $result;
+        }
+    }
+    
+    function getOneImgPath($img_id, $path)
+    {
+        $query = mysql_query("SELECT ".$path." FROM images WHERE img_id='".$img_id."'");
+        if (mysql_num_rows($query) != 0)
+        {
+            return mysql_result($query, 0);
         }
     }

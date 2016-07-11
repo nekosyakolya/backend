@@ -34,13 +34,28 @@
           <a class="hint message" id="success_edit">Регистрация прошла успешно!</a>
           <a class="hint message" id="error_edit">Ошибка!</a>
         </form>
-        <a class="title font_family_montserrat title_padding" id="delete">delete?</a>
+        <a class="title font_family_montserrat title_padding" id="delete">delete album?</a>
         <div id="podlogka" class="hint">
           <div id="modalWindow">
-            <a id="yes">YES!</a>
+            <a href="../php/delete_album.php">YES!</a>
             <a id="no">NO!</a>
           </div>
         </div>
+        <div class="float_left column">
+          {foreach from=$img_array item=img name=foo}
+            <div class="center_edit">
+              <img src="{$img}" class="img_thumbs" alt="loading" />
+            </div>
+          {/foreach}
+        </div>
+        <div class="float_right">
+          {foreach from=$id_array item=id name=foo}
+            <div class="delete_album">
+              <a href="../php/delete_img.php?id={$id}" class="title font_family_montserrat delete_img">DELETE</a>
+            </div>
+          {/foreach}
+        </div>
+        <div class="clear"></div>
       </div>
     </div>
 {/block}

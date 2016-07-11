@@ -4,9 +4,15 @@
     require_once("../include/database.inc.php");
     require_once("index.php");
     
-    $_SESSION["name_album"] = $_GET['name'];
+    
     if (isset($_SESSION["id_user"]))
     {
+        $id = $_GET['id'];
+        $pathFull = getOneImgPath($id, "img_full_way");
+        @unlink($pathFull);
+        $pathThumbs = getOneImgPath($id, "img_thumbs_way");
+        @unlink($pathThumbs);
+        deleteImg($id);
         $_SESSION["id_album"] = getIdAlbum($_SESSION["id_user"], $_SESSION["name_album"]);
         $g_smarty->assign("name_album", $_SESSION["name_album"]);
         $g_smarty->assign("img_array", getImgPath($_SESSION["id_album"], 'img_thumbs_way'));

@@ -215,6 +215,36 @@ body
   width: 439px;
 }
 
+.float_right
+{
+    float: right;
+    margin-right: 200px;
+}
+
+.column
+{
+    padding-left: 200px;
+}
+
+.delete_album
+{
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 240px;
+}
+
+.delete_img:hover
+{
+  color: #f3e5f5;
+  background: #4a148c;
+}
+
+.delete_img
+{
+    margin: 0;
+}
+
 .menu_block_header_user
 {
   width: 581px;
@@ -234,6 +264,13 @@ body
   margin: 0 auto;
   width: 33%;
   padding-top: 58px;
+}
+
+.center_edit
+{
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 20px;
 }
 
 li
