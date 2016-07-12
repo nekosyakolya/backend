@@ -1,27 +1,29 @@
 var register = $("#register_form");
 var block = $("#success_register");
-var error_block = $("#error_register");
+var errorBlock = $("#error_register");
+var hide = "hint";
+var show = "open_block";
 
 $(document).ready(function()
 {
      register.submit(function()
      { 
-          var form_data = register.serializeArray();
+          var formData = register.serializeArray();
           $.ajax(
           {
               type: "post", 
               url: "php/register.php",
-              data: form_data,
+              data: formData,
               success: function(data)
               {
                   block.html(data);
-                  block.removeClass("hint"); 
-                  block.addClass("open_block");
+                  block.removeClass(hide); 
+                  block.addClass(show);
               },
               error: function()
               {
-                  error_block.removeClass("hint"); 
-                  error_block.addClass("open_block");  
+                  errorBlock.removeClass(hide); 
+                  errorBlock.addClass(show);  
               }
           });
           return false; 

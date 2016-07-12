@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-08 15:47:44
+/* Smarty version 3.1.29, created on 2016-07-12 11:22:37
   from "Z:\home\test1.ru\www\backend\project\php\template\intropageMyAlbum.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_577f92e0562433_21888409',
+  'unifunc' => 'content_57849abd92b831_57063012',
   'file_dependency' => 
   array (
     '7f4ae2d542fc7fbddb9d40b645cb783d77694c99' => 
     array (
       0 => 'Z:\\home\\test1.ru\\www\\backend\\project\\php\\template\\intropageMyAlbum.tpl',
-      1 => 1467978455,
+      1 => 1468307942,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:layout.tpl' => 1,
   ),
 ),false)) {
-function content_577f92e0562433_21888409 ($_smarty_tpl) {
+function content_57849abd92b831_57063012 ($_smarty_tpl) {
 $_smarty_tpl->ext->_inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", array (
-  0 => 'block_1964577f92e0417667_04156909',
+  0 => 'block_1360557849abd836b39_12008877',
   1 => false,
   3 => 0,
   2 => 0,
@@ -35,7 +35,7 @@ $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "main_content", a
 
 <?php 
 $_smarty_tpl->ext->_inheritance->processBlock($_smarty_tpl, 0, "scripts", array (
-  0 => 'block_23669577f92e0524ed7_61767664',
+  0 => 'block_588257849abd900143_70705960',
   1 => false,
   3 => 0,
   2 => 0,
@@ -44,7 +44,7 @@ $_smarty_tpl->ext->_inheritance->endChild($_smarty_tpl);
 $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'main_content'}  file:intropageMyAlbum.tpl */
-function block_1964577f92e0417667_04156909($_smarty_tpl, $_blockParentStack) {
+function block_1360557849abd836b39_12008877($_smarty_tpl, $_blockParentStack) {
 ?>
 
   <div class="header">
@@ -76,7 +76,7 @@ function block_1964577f92e0417667_04156909($_smarty_tpl, $_blockParentStack) {
       <div class="center_block back_white about_us_entrance">
         <h2 class="title font_family_montserrat title_padding">Выбирайте снимки,<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 !</h2>
-        <form id="uploadForm" action="doajaxfileupload.php" method="post" enctype="multipart/form-data" class="regisrize">
+        <form id="uploadForm" action="multi_upload.php" method="post" enctype="multipart/form-data" class="regisrize">
           <input name="MAX_FILE_SIZE" value="1000000" type="hidden"/>
           <input name="fileToUpload[]" id="fileToUpload" class="MultiFile regisrize_input_loading" type="file" />
           <input type="submit" value="Загрузить" class="regisrize_input regisrize_submit" name="loading"/>
@@ -93,7 +93,7 @@ function block_1964577f92e0417667_04156909($_smarty_tpl, $_blockParentStack) {
 }
 /* {/block 'main_content'} */
 /* {block 'scripts'}  file:intropageMyAlbum.tpl */
-function block_23669577f92e0524ed7_61767664($_smarty_tpl, $_blockParentStack) {
+function block_588257849abd900143_70705960($_smarty_tpl, $_blockParentStack) {
 ?>
 
   <?php echo '<script'; ?>

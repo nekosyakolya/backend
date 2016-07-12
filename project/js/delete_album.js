@@ -1,13 +1,19 @@
+var hide = "hint";
+var show = "open_block";
+var cancel = $('#no');
+var deleteButton = $('#delete');
+var background = $('#podlogka');
+
 $(document).ready(function()
 {
-    $('#no').click(function()
+    cancel.click(function()
     {
-        $('#podlogka').addClass("hint"); 
-        $('#podlogka').removeClass("open_block");
+        background.addClass(hide); 
+        background.removeClass(show);
     });
-    $('#delete').click(function()
+    deleteButton.click(function()
     {
-        $('#podlogka').addClass("open_block"); 
-        $('#podlogka').removeClass("hint");
+        background.addClass(show); 
+        background.removeClass(hide);
     });
 });

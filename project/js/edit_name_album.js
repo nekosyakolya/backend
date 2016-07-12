@@ -14,7 +14,7 @@ $(document).ready(function()
               data: form_data,
               success: function(data)
               {
-                  block.html("Имя альбома изменено");
+                  block.html("РРјСЏ Р°Р»СЊР±РѕРјР° РёР·РјРµРЅРµРЅРѕ!");
                   block.removeClass("hint"); 
                   block.addClass("open_block");
               },
