@@ -1,4 +1,4 @@
-{extends file='layout.tpl'}
+﻿{extends file='layout.tpl'}
 {block name="main_content"}
   <div class="header">
       <div class="center_block"> 
@@ -27,20 +27,24 @@
     </div>
     <div class="description">
       <div class="center_block back_white about_us_entrance">
-        <h2 class="title font_family_montserrat title_padding">Изменить имя альбома</h2>
-        <form action="" name="questionnaire" method="post" class="regisrize padding_auto" id="editNameAlbum">
-          <input type="text" name="nameAlbum" value="{$name_album}" class="regisrize_input_loading" />
-          <input type="submit" value="Изменить" class="regisrize_input regisrize_submit" id="createAlbum" name="createAlbum" />
-          <a class="hint message" id="success_edit">Регистрация прошла успешно!</a>
-          <a class="hint message" id="error_edit">Ошибка!</a>
-        </form>
-        <a class="title font_family_montserrat title_padding" id="delete">delete album?</a>
+        <h2 class="title font_family_montserrat title_padding"><a id="delete">Удалить альбом?</a></h2>
         <div id="podlogka" class="hint">
           <div id="modalWindow">
-            <a href="../php/delete_album.php">YES!</a>
-            <a id="no">NO!</a>
+           <h2 class="title font_family_montserrat title_padding">Удалить альбом?</h2>
+            <a href="../php/delete_album.php">да!</a>
+            <a id="no">нет!</a>
           </div>
         </div>
+        <div class="update">
+          <h2 class="title font_family_montserrat">Изменить имя альбома</h2>
+          <form action="" name="questionnaire" method="post" class="regisrize" id="editNameAlbum">
+            <input type="text" name="nameAlbum" value="{$name_album}" class="regisrize_input_loading" />
+            <input type="submit" value="Изменить" class="regisrize_input regisrize_submit" id="createAlbum" name="createAlbum" />
+            <a class="hint message" id="success_edit">Регистрация прошла успешно!</a>
+            <a class="hint message" id="error_edit">Ошибка!</a>
+          </form>
+        </div>
+        <a href="../php/add_img.php" class="title font_family_montserrat title_padding">Загрузить новые фотографии!</a>
         <div class="float_left column">
           {foreach from=$img_array item=img name=foo}
             <div class="center_edit">
@@ -51,7 +55,7 @@
         <div class="float_right">
           {foreach from=$id_array item=id name=foo}
             <div class="delete_album">
-              <a href="../php/delete_img.php?id={$id}" class="title font_family_montserrat delete_img">DELETE</a>
+              <a href="../php/delete_img.php?id={$id}" class="title font_family_montserrat delete_img">удалить фото</a>
             </div>
           {/foreach}
         </div>

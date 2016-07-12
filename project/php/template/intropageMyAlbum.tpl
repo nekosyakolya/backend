@@ -28,7 +28,7 @@
     <div class="description">
       <div class="center_block back_white about_us_entrance">
         <h2 class="title font_family_montserrat title_padding">Выбирайте снимки,{$name}!</h2>
-        <form id="uploadForm" action="doajaxfileupload.php" method="post" enctype="multipart/form-data" class="regisrize">
+        <form id="uploadForm" action="multi_upload.php" method="post" enctype="multipart/form-data" class="regisrize">
           <input name="MAX_FILE_SIZE" value="1000000" type="hidden"/>
           <input name="fileToUpload[]" id="fileToUpload" class="MultiFile regisrize_input_loading" type="file" />
           <input type="submit" value="Загрузить" class="regisrize_input regisrize_submit" name="loading"/>

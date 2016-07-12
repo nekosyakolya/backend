@@ -24,7 +24,7 @@
         {
             if(!mkdir($pathToImageDirectory))
             {
-                die("Возникли проблемы! попробуйте снова!");
+                die(PROBLEM);
             } 
         }
         imagejpeg($newImage, $pathToImageDirectory . $filename);

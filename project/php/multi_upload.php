@@ -9,9 +9,9 @@
     {
         $error = "";
         $fileElementName = "fileToUpload";
-        $files_count = sizeof($_FILES[$fileElementName]["name"]);
+        $filesCount = sizeof($_FILES[$fileElementName]["name"]);
 
-        for ($i = 0; $i < $files_count - 1; $i++) 
+        for ($i = 0; $i < $filesCount - 1; $i++) 
         {
             if (!empty($_FILES[$fileElementName]["error"][$i]))
             {
