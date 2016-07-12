@@ -54,7 +54,7 @@
         mysql_query('DELETE FROM album WHERE `album_id`="'.$album_id.'"');
     }
     
-    function deleteImg($img_id)
+    function deleteImgFromAlbum($img_id)
     {
         $query = mysql_query("SELECT * FROM images WHERE img_id='".$img_id."'");
         $numrows = mysql_num_rows($query); 

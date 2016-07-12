@@ -19,3 +19,9 @@
     {
         deleteAlbum($id);
     }
+    
+    function deletePhoto($id, $receivedPath)
+    {
+        $path = getOneImgPath($id, $receivedPath);
+        @unlink($path);
+    }

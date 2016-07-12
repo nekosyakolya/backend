@@ -11,3 +11,7 @@
         $g_smarty->assign("img_array", getImgPath($_SESSION["id_album"], 'img_thumbs_way'));
         $g_smarty->display("img.tpl");
     }
+    else
+    {
+        $g_smarty->display("error.tpl");
+    }

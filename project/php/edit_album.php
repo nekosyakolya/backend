@@ -13,3 +13,7 @@
         $g_smarty->assign("id_array", getImgId($_SESSION["id_album"]));
         $g_smarty->display("edit_album.tpl");
     }
+    else
+    {
+        $g_smarty->display("error.tpl");
+    }

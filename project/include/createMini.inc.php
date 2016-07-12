@@ -1,63 +1,71 @@
 <?php
-    function createThumbnail($filename) 
+    require_once("config.inc.php"); 
+    
+    function createNewImage($filename, $pathToImageDirectory) 
     {
-        $final_width_of_image = 300;
-        $path_to_image_directory = '../images/tmp/';
-        $path_to_thumbs_directory = '../images/thumbs/';
-        if(preg_match('/[.](jpg)$/', $filename)) 
+      if(preg_match('/[.](jpg)$/', $filename)) 
+      {
+          $image = imagecreatefromjpeg($pathToImageDirectory . $filename);
+      }
+      elseif (preg_match('/[.](gif)$/', $filename))
+      {
+          $image = imagecreatefromgif($pathToImageDirectory . $filename);
+      }
+      elseif (preg_match('/[.](png)$/', $filename))
+      {
+          $image = imagecreatefrompng($pathToImageDirectory . $filename);
+      }
+      return $image;
+    }
+    
+    function addImage($filename, $pathToImageDirectory, $newImage) 
+    {
+        if(!file_exists($pathToImageDirectory))
         {
-            $im = imagecreatefromjpeg($path_to_image_directory . $filename);
+            if(!mkdir($pathToImageDirectory))
+            {
+                die("Возникли проблемы! попробуйте снова!");
+            } 
         }
-        elseif (preg_match('/[.](gif)$/', $filename))
-        {
-            $im = imagecreatefromgif($path_to_image_directory . $filename);
-        }
-        elseif (preg_match('/[.](png)$/', $filename))
-        {
-            $im = imagecreatefrompng($path_to_image_directory . $filename);
-        }
-        
-        $ox = (imagesx($im)/ 2) - ($final_width_of_image /2);
-        $oy = (imagesy($im)/ 2) - ($final_width_of_image /2);
-        
-        $nx = $final_width_of_image;
-        $ny = $final_width_of_image;
-        
-        $nm = imagecreatetruecolor($nx, $ny);
-        
-        imagecopyresized($nm, $im, 0, 0, $ox, $oy, $nx, $nx, $nx, $nx);
+        imagejpeg($newImage, $pathToImageDirectory . $filename);
+    }
+    
 
-        imagejpeg($nm, $path_to_thumbs_directory . $filename);
+    
+    function createSquareImg($filename) 
+    {
+        $finalWidthOfImage = 300;
+        $image = createNewImage($filename, FILE_PATH_TMP);
+        
+        $imageWidth = $finalWidthOfImage;
+        $imageHeight = $finalWidthOfImage;
+        $imageX = (imagesx($image)/ 2) - ($finalWidthOfImage /2);
+        $imageY = (imagesy($image)/ 2) - ($finalWidthOfImage /2);
+        $newImageX = 0;
+        $newImageY = 0;
+        $newImageWidth = $finalWidthOfImage;
+        $newImageHeight = $finalWidthOfImage;
+        
+        $newImage = imagecreatetruecolor($finalWidthOfImage, $finalWidthOfImage);
+        imagecopyresized($newImage, $image, $newImageX, $newImageY, $imageX, $imageY, $newImageWidth, $newImageHeight, $imageWidth, $imageHeight);
+        addImage($filename, FILE_PATH_THUMBS, $newImage);
     };
 
-    function createFullnail($filename) 
+    function createNewFullImg($filename) 
     {
-        $final_width_of_image = 600;
-        $path_to_image_directory = '../images/tmp/';
-        $path_to_thumbs_directory = '../images/full/';
-        if(preg_match('/[.](jpg)$/', $filename)) {
-          $im = imagecreatefromjpeg($path_to_image_directory . $filename);
-        } else if (preg_match('/[.](gif)$/', $filename)) {
-          $im = imagecreatefromgif($path_to_image_directory . $filename);
-        } else if (preg_match('/[.](png)$/', $filename)) {
-          $im = imagecreatefrompng($path_to_image_directory . $filename);
-        } 
-
-        $ox = imagesx($im);
-        $oy = imagesy($im);
+        $finalWidthOfImage = 600;
+        $image = createNewImage($filename, FILE_PATH_TMP);
         
-        $nx = $final_width_of_image;
-        $ny = floor($oy * ($final_width_of_image / $ox));
+        $imageWidth = imagesx($image);
+        $imageHeight = imagesy($image);
+        $imageX = 0;
+        $imageY = 0;
+        $newImageWidth = $finalWidthOfImage;
+        $newImageHeight = floor($imageHeight  * ($finalWidthOfImage / $imageWidth));
+        $newImageX = 0;
+        $newImageY = 0;
         
-        $nm = imagecreatetruecolor($nx, $ny);
-        
-        imagecopyresized($nm, $im, 0,0,0,0,$nx,$ny,$ox,$oy);
-        
-        if(!file_exists($path_to_thumbs_directory)) {
-          if(!mkdir($path_to_thumbs_directory)) {
-                 die("Возникли проблемы! попробуйте снова!");
-          } 
-             }
-
-        imagejpeg($nm, $path_to_thumbs_directory . $filename);
+        $newImage = imagecreatetruecolor($newImageWidth, $newImageHeight);
+        imagecopyresized($newImage, $image, $newImageX, $newImageY, $imageX, $imageY, $newImageWidth, $newImageHeight, $imageWidth, $imageHeight);
+        addImage($filename, FILE_PATH_FULL, $newImage);
     };
